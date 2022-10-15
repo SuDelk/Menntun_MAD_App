@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Menntun Educational Application</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="sign_Tutor" />
+    <string name="sign_tutor">Login As Tutor</string>
+    <string name="sign_student">Login As Student</string>
+    <string name="reg">Register</string>
+    <string name="men">Menntun</string>
+    <string name="name">Name</string>
 </resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1078210993660",
+    "project_id": "menntun-4ae5e",
+    "storage_bucket": "menntun-4ae5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078210993660:android:f79beb48bcda2ad81be679",
+        "android_client_info": {
+          "package_name": "com.example.menntuneducationalapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078210993660-94p3b4bv0b1896hunaoit5m29od1kbl3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYrqIoFvUEbTICM71M3_RB2DFDtFAhu0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078210993660-94p3b4bv0b1896hunaoit5m29od1kbl3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

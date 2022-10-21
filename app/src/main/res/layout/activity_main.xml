@@ -32,7 +32,7 @@
         android:layout_height="128dp"
         android:layout_gravity="start"
         android:backgroundTint="#FF9800"
-        android:enabled="false"
+        android:enabled="true"
         android:text="@string/past_papers"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
@@ -44,12 +44,13 @@
         app:layout_constraintVertical_bias="0.273" />
 
     <Button
-        android:id="@+id/forum"
+        android:id="@+id/forumBtn"
         android:layout_width="169dp"
         android:layout_height="128dp"
         android:layout_gravity="start"
         android:backgroundTint="#FF9800"
-        android:enabled="false"
+        android:enabled="true"
+        android:onClick="toForum"
         android:text="@string/forum"
         android:textColor="@color/black"
         android:textColorHint="@color/white"

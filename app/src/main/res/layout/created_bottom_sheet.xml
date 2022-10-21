@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/bottomSheet"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Quiz Created"
+        android:layout_margin="10dp"
+        android:padding="3dp"
+        android:id="@+id/quizCreatedTxt"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:id="@+id/quizCreatedHome"
+        />
+
+
+</LinearLayout>

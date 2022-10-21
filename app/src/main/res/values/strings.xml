@@ -15,4 +15,12 @@
     <string name="reg">Register</string>
     <string name="men">Menntun</string>
     <string name="name">Name</string>
+    <string name="wel">Welcome !</string>
+    <string name="forum">Forum</string>
+    <string name="past_papers">Past Papers</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="quizzes">Quizzes</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
+    <string name="subjectName">Subject Name</string>
 </resources>

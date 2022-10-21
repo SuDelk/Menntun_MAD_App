@@ -8,106 +8,113 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/quiz"
+        android:id="@+id/quizzes"
         android:layout_width="169dp"
         android:layout_height="128dp"
         android:layout_gravity="start"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
         android:backgroundTint="#FF9800"
-        android:enabled="false"
-        android:text="Quizzes"
+        android:enabled="true"
+        android:onClick="toQuiz"
+        android:text="@string/quizzes"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintEnd_toStartOf="@+id/forum"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintTop_toBottomOf="@+id/db"
+        app:layout_constraintVertical_bias="0.061"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/pp"
         android:layout_width="169dp"
         android:layout_height="128dp"
         android:layout_gravity="start"
-        android:layout_marginEnd="16dp"
         android:backgroundTint="#FF9800"
-        android:enabled="false"
-        android:text="Past Papers"
+        android:enabled="true"
+        android:text="@string/past_papers"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.24" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273" />
 
     <Button
-        android:id="@+id/forum"
+        android:id="@+id/forumBtn"
         android:layout_width="169dp"
         android:layout_height="128dp"
         android:layout_gravity="start"
-        android:layout_marginEnd="16dp"
         android:backgroundTint="#FF9800"
-        android:enabled="false"
-        android:text="Forum"
+        android:enabled="true"
+        android:onClick="toForum"
+        android:text="@string/forum"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintTop_toBottomOf="@+id/pp"
+        app:layout_constraintVertical_bias="0.063" />
 
     <Button
         android:id="@+id/db"
         android:layout_width="169dp"
         android:layout_height="128dp"
         android:layout_gravity="start"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
         android:backgroundTint="#FF9800"
         android:enabled="false"
-        android:text="Dashboard"
+        android:text="@string/dashboard"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintEnd_toStartOf="@+id/pp"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.24" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="417dp"
         android:layout_height="47dp"
         android:background="#FFEB3B"
-        android:text="Welcome !"
+        android:text="@string/wel"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/purple_700"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="59dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="60dp"
         android:layout_height="48dp"
         android:clickable="true"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="59dp"
+        android:contentDescription="@string/todo1"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck,DuplicateSpeakableTextCheck"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="408dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="672dp"
         android:background="#673AB7"
         android:backgroundTint="@color/purple_500"
         android:text="@string/men"
@@ -120,28 +127,34 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name"
+        android:textColor="#33691E"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/textView3"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="187dp" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="307dp"
         android:layout_height="216dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937"
+        app:layout_constraintTop_toBottomOf="@+id/quizzes"
+        app:layout_constraintVertical_bias="0.142"
         app:srcCompat="@drawable/pic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

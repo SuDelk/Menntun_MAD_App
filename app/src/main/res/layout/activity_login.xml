@@ -37,25 +37,28 @@
         android:hint="@string/prompt_password"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:selectAllOnFocus="true"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/studentLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="64dp"
         android:backgroundTint="#FF9800"
-        android:enabled="false"
+        android:enabled="true"
+        android:onClick="StudentLogin"
         android:text="@string/sign_student"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
@@ -66,13 +69,14 @@
         app:layout_constraintVertical_bias="0.276" />
 
     <Button
-        android:id="@+id/loginTutor"
+        android:id="@+id/tutorLog"
         android:layout_width="180dp"
         android:layout_height="48dp"
         android:layout_gravity="start"
         android:layout_marginBottom="64dp"
         android:backgroundTint="#FF9800"
-        android:enabled="false"
+        android:enabled="true"
+        android:onClick="TutorLogin"
         android:text="@string/sign_tutor"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
@@ -80,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@+id/studentLog"
         app:layout_constraintVertical_bias="0.05" />
 
     <Button
@@ -90,7 +94,8 @@
         android:layout_gravity="start"
         android:layout_marginBottom="132dp"
         android:backgroundTint="#FF9800"
-        android:enabled="false"
+        android:enabled="true"
+        android:onClick="Register"
         android:text="@string/reg"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
@@ -98,7 +103,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginTutor"
+        app:layout_constraintTop_toBottomOf="@+id/tutorLog"
         app:layout_constraintVertical_bias="0.213" />
 
     <ProgressBar

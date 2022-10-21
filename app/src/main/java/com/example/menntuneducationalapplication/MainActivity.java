@@ -23,4 +23,8 @@ public class MainActivity extends AppCompatActivity {
         Intent X=new Intent(this,Forums.class);
         startActivity(X);
     }
+    public void toQuiz(View view){
+        Intent i =  new Intent(this,quizzes.class);
+        startActivity(i);
+    }
 }

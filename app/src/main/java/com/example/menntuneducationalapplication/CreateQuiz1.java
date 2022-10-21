@@ -12,6 +12,7 @@ public class CreateQuiz1 extends AppCompatActivity {
     EditText quizName;
     EditText questionCount;
     Button createQuizBtn;
+    Button bb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,8 @@ public class CreateQuiz1 extends AppCompatActivity {
         quizName = findViewById(R.id.quizName1);
         questionCount = findViewById(R.id.noOfQues);
         createQuizBtn = findViewById(R.id.createQuizBtn);
+        bb=findViewById(R.id.accessForum);
+
 
         createQuizBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +34,14 @@ public class CreateQuiz1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        bb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent X = new Intent(CreateQuiz1.this, CreateForums.class);
+                startActivity(X);
+            }
+        });
+
     }
 
 }

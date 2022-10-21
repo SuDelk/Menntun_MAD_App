@@ -43,4 +43,5 @@
     <string name="question">Question</string>
     <string name="name_of_quiz">Name Of Quiz</string>
     <string name="question_number">Question Number</string>
+    <string name="qForum">Ask A Question</string>
 </resources>

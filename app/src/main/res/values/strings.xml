@@ -23,4 +23,10 @@
     <string name="todo">TODO</string>
     <string name="todo1">TODO</string>
     <string name="subjectName">Subject Name</string>
+    <string name="title_activity_reg_view">RegView</string>
+    <string name="regStd">Register As a Student</string>
+    <string name="regTut">Register As a Tutor</string>
+    <string name="usname">Username</string>
+    <string name="createQuiz">Create Quiz</string>
+    <string name="quizN">Quiz Name</string>
 </resources>

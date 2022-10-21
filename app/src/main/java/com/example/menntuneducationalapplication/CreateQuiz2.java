@@ -64,18 +64,36 @@ public class CreateQuiz2 extends AppCompatActivity {
                     Option3 = option3.getText().toString();
                     Option4 = option4.getText().toString();
                     Answer = Option1;
-                    QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
-                    insertQuizQuestion.push().setValue(newQuestion);
-                    Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
-                    question.setText("");
-                    option1.setText("");
-                    option2.setText("");
-                    option3.setText("");
-                    option4.setText("");
-                    if(currentPos != questionCount){
-                        questionNumberView.setText("Question " + (currentPos + 1) + "/" + questionCount);
-                    }else{
-                        showBottomSheet();
+                    if( Question.length() == 0 || Option1.length() == 0 || Option2.length() == 0 || Option3.length() == 0 || Option4.length() == 0){
+                        if(Question.length() == 0){
+                            question.setError( "Question is required!" );
+                        }
+                        else if (Option1.length() == 0){
+                            option1.setError( "Option 1 is required!" );
+                        }
+                        else if (Option2.length() == 0){
+                            option2.setError( "Option 2 is required!" );
+                        }
+                        else if (Option3.length() == 0){
+                            option3.setError( "Option 3 is required!" );
+                        }
+                        else if (Option4.length() == 0){
+                            option4.setError( "Option 4 is required!" );
+                        }
+                    }else {
+                        QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
+                        insertQuizQuestion.push().setValue(newQuestion);
+                        Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
+                        question.setText("");
+                        option1.setText("");
+                        option2.setText("");
+                        option3.setText("");
+                        option4.setText("");
+                        if (currentPos != questionCount) {
+                            questionNumberView.setText("Question " + (currentPos + 1) + "/" + questionCount);
+                        } else {
+                            showBottomSheet();
+                        }
                     }
                 }
             }
@@ -91,18 +109,36 @@ public class CreateQuiz2 extends AppCompatActivity {
                     Option3 = option3.getText().toString();
                     Option4 = option4.getText().toString();
                     Answer = Option2;
-                    QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
-                    insertQuizQuestion.push().setValue(newQuestion);
-                    Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
-                    question.setText("");
-                    option1.setText("");
-                    option2.setText("");
-                    option3.setText("");
-                    option4.setText("");
-                    if(currentPos != questionCount){
-                        questionNumberView.setText("Question " + (currentPos + 1) + "/" + questionCount);
-                    }else{
-                        showBottomSheet();
+                    if( Question.length() == 0 || Option1.length() == 0 || Option2.length() == 0 || Option3.length() == 0 || Option4.length() == 0){
+                        if(Question.length() == 0){
+                            question.setError( "Question is required!" );
+                        }
+                        else if (Option1.length() == 0){
+                            option1.setError( "Option 1 is required!" );
+                        }
+                        else if (Option2.length() == 0){
+                            option2.setError( "Option 2 is required!" );
+                        }
+                        else if (Option3.length() == 0){
+                            option3.setError( "Option 3 is required!" );
+                        }
+                        else if (Option4.length() == 0){
+                            option4.setError( "Option 4 is required!" );
+                        }
+                    }else {
+                        QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
+                        insertQuizQuestion.push().setValue(newQuestion);
+                        Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
+                        question.setText("");
+                        option1.setText("");
+                        option2.setText("");
+                        option3.setText("");
+                        option4.setText("");
+                        if (currentPos != questionCount) {
+                            questionNumberView.setText("Question " + (currentPos + 1) + "/" + questionCount);
+                        } else {
+                            showBottomSheet();
+                        }
                     }
                 }
             }
@@ -118,18 +154,36 @@ public class CreateQuiz2 extends AppCompatActivity {
                     Option3 = option3.getText().toString();
                     Option4 = option4.getText().toString();
                     Answer = Option3;
-                    QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
-                    insertQuizQuestion.push().setValue(newQuestion);
-                    Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
-                    question.setText("");
-                    option1.setText("");
-                    option2.setText("");
-                    option3.setText("");
-                    option4.setText("");
-                    if(currentPos != questionCount){
-                        questionNumberView.setText("Question " + (currentPos + 1) + "/" + questionCount);
-                    }else{
-                        showBottomSheet();
+                    if( Question.length() == 0 || Option1.length() == 0 || Option2.length() == 0 || Option3.length() == 0 || Option4.length() == 0){
+                        if(Question.length() == 0){
+                            question.setError( "Question is required!" );
+                        }
+                        else if (Option1.length() == 0){
+                            option1.setError( "Option 1 is required!" );
+                        }
+                        else if (Option2.length() == 0){
+                            option2.setError( "Option 2 is required!" );
+                        }
+                        else if (Option3.length() == 0){
+                            option3.setError( "Option 3 is required!" );
+                        }
+                        else if (Option4.length() == 0){
+                            option4.setError( "Option 4 is required!" );
+                        }
+                    }else {
+                        QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
+                        insertQuizQuestion.push().setValue(newQuestion);
+                        Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
+                        question.setText("");
+                        option1.setText("");
+                        option2.setText("");
+                        option3.setText("");
+                        option4.setText("");
+                        if (currentPos != questionCount) {
+                            questionNumberView.setText("Question " + (currentPos + 1) + "/" + questionCount);
+                        } else {
+                            showBottomSheet();
+                        }
                     }
                 }
             }
@@ -145,18 +199,36 @@ public class CreateQuiz2 extends AppCompatActivity {
                     Option3 = option3.getText().toString();
                     Option4 = option4.getText().toString();
                     Answer = Option4;
-                    QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
-                    insertQuizQuestion.push().setValue(newQuestion);
-                    Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
-                    question.setText("");
-                    option1.setText("");
-                    option2.setText("");
-                    option3.setText("");
-                    option4.setText("");
-                    if(currentPos != questionCount){
-                        questionNumberView.setText("Question " + (currentPos + 1) + "/" + questionCount);
-                    }else{
-                        showBottomSheet();
+                    if( Question.length() == 0 || Option1.length() == 0 || Option2.length() == 0 || Option3.length() == 0 || Option4.length() == 0){
+                        if(Question.length() == 0){
+                            question.setError( "Question is required!" );
+                        }
+                        else if (Option1.length() == 0){
+                            option1.setError( "Option 1 is required!" );
+                        }
+                        else if (Option2.length() == 0){
+                            option2.setError( "Option 2 is required!" );
+                        }
+                        else if (Option3.length() == 0){
+                            option3.setError( "Option 3 is required!" );
+                        }
+                        else if (Option4.length() == 0){
+                            option4.setError( "Option 4 is required!" );
+                        }
+                    }else {
+                        QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
+                        insertQuizQuestion.push().setValue(newQuestion);
+                        Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
+                        question.setText("");
+                        option1.setText("");
+                        option2.setText("");
+                        option3.setText("");
+                        option4.setText("");
+                        if (currentPos != questionCount) {
+                            questionNumberView.setText("Question " + (currentPos + 1) + "/" + questionCount);
+                        } else {
+                            showBottomSheet();
+                        }
                     }
                 }
             }

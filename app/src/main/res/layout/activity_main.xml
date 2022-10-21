@@ -8,29 +8,29 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/quiz"
+        android:id="@+id/quizzes"
         android:layout_width="169dp"
         android:layout_height="128dp"
         android:layout_gravity="start"
-        android:layout_marginStart="16dp"
         android:backgroundTint="#FF9800"
-        android:enabled="false"
+        android:enabled="true"
+        android:onClick="toQuiz"
         android:text="@string/quizzes"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/forum"
-        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintTop_toBottomOf="@+id/db"
+        app:layout_constraintVertical_bias="0.061"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/pp"
         android:layout_width="169dp"
         android:layout_height="128dp"
         android:layout_gravity="start"
-        android:layout_marginEnd="16dp"
         android:backgroundTint="#FF9800"
         android:enabled="false"
         android:text="@string/past_papers"
@@ -38,17 +38,16 @@
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273" />
 
     <Button
         android:id="@+id/forum"
         android:layout_width="169dp"
         android:layout_height="128dp"
         android:layout_gravity="start"
-        android:layout_marginEnd="16dp"
         android:backgroundTint="#FF9800"
         android:enabled="false"
         android:text="@string/forum"
@@ -56,18 +55,16 @@
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintTop_toBottomOf="@+id/pp"
+        app:layout_constraintVertical_bias="0.063" />
 
     <Button
         android:id="@+id/db"
         android:layout_width="169dp"
         android:layout_height="128dp"
         android:layout_gravity="start"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="26dp"
         android:backgroundTint="#FF9800"
         android:enabled="false"
         android:text="@string/dashboard"
@@ -75,10 +72,10 @@
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/pp"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273" />
 
     <TextView
         android:id="@+id/textView3"
@@ -150,12 +147,13 @@
         android:id="@+id/imageView2"
         android:layout_width="307dp"
         android:layout_height="216dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937"
-        app:srcCompat="@drawable/pic"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintTop_toBottomOf="@+id/quizzes"
+        app:layout_constraintVertical_bias="0.142"
+        app:srcCompat="@drawable/pic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,4 +23,24 @@
     <string name="todo">TODO</string>
     <string name="todo1">TODO</string>
     <string name="subjectName">Subject Name</string>
+    <string name="title_activity_reg_view">RegView</string>
+    <string name="regStd">Register As a Student</string>
+    <string name="regTut">Register As a Tutor</string>
+    <string name="usname">Username</string>
+    <string name="createQuiz">Create Quiz</string>
+    <string name="quizN">Quiz Name</string>
+    <string name="entQ">Enter Question</string>
+    <string name="O1">"Enter "</string>
+    <string name="op1">Enter Option 1</string>
+    <string name="op2">Enter Option 2</string>
+    <string name="op3">Enter Option 3</string>
+    <string name="op4">Enter Option 4</string>
+    <string name="ansTut">Select Answer Option</string>
+    <string name="option_1">Option 1</string>
+    <string name="option_3">Option 3</string>
+    <string name="option_2">Option 2</string>
+    <string name="option_4">Option 4</string>
+    <string name="question">Question</string>
+    <string name="name_of_quiz">Name Of Quiz</string>
+    <string name="question_number">Question Number</string>
 </resources>

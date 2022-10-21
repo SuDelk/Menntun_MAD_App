@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateQuiz1"
+    android:background="@drawable/bg1">
+
+
+    <Button
+        android:id="@+id/createQuizBtn"
+        android:layout_width="171dp"
+        android:layout_height="52dp"
+        android:backgroundTint="@color/black"
+        android:outlineAmbientShadowColor="@color/cardview_dark_background"
+        android:text="@string/createQuiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noOfQues"
+        app:layout_constraintVertical_bias="0.352" />
+
+    <EditText
+        android:id="@+id/quizName1"
+        android:layout_width="175dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="188dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/quizN"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/noOfQues"
+        android:layout_width="186dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Number of Questions"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizName1"
+        app:layout_constraintVertical_bias="0.01"
+        android:autofillHints="" />
+</androidx.constraintlayout.widget.ConstraintLayout>

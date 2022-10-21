@@ -1,21 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateQuiz2">
+    tools:context=".CreateQuiz2"
+    android:background="@drawable/bg">
 
-    <TextView
-        android:id="@+id/txt"
+    <LinearLayout
+        android:id="@+id/lin1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="195dp"
-        android:layout_marginEnd="193dp"
-        android:layout_marginBottom="517dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="177dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/purple_200"
+            android:minHeight="48dp"
+            android:padding="4dp"
+            android:text="@string/option_3"
+            android:textAllCaps="false"
+            tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/Option4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/purple_200"
+            android:minHeight="48dp"
+            android:padding="4dp"
+            android:text="@string/option_4"
+            android:textAllCaps="false"
+            tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/idTVQuestionNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameOfQuiz"
+        android:layout_marginTop="1dp"
+        android:background="#A14BDA84"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#F5F8F4"
+        android:textColorHighlight="#B52E2E"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/IdTVQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/idTVQuestionNum"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="19dp"
+        android:autofillHints=""
+        android:backgroundTint="#E3CE0E"
+        android:gravity="center"
+        android:hint="@string/entQ"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/lin2"
+        android:layout_width="wrap_content"
+        android:layout_height="137dp"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="176dp"
+        android:layout_toStartOf="@+id/lin1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Option1"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/purple_200"
+            android:minHeight="48dp"
+            android:padding="4dp"
+            android:text="@string/option_1"
+            android:textAllCaps="false"
+            tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/Option2"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/purple_200"
+            android:minHeight="48dp"
+            android:padding="4dp"
+            android:text="@string/option_2"
+            android:textAllCaps="false"
+            tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nameOfQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#75B351F1"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:includeFontPadding="true"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="@dimen/maxTitle" />
+
+    <LinearLayout
+        android:id="@+id/linlay1"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/IdTVQuestion"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="22dp"
+        android:background="#80DCBCBC"
+        android:backgroundTint="#C3298166"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/option1Txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/op1"
+            android:inputType="textPersonName"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/option2Txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/op2"
+            android:inputType="textPersonName"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/option3Txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/op3"
+            android:inputType="textPersonName"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/option4Txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/op4"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/linlay1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="-1dp"
+        android:gravity="center"
+        android:text="@string/ansTut"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#F1EAEA" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="67dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/IdTVQuestion"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="17dp"
+        android:layout_toStartOf="@+id/linlay1"
+        android:background="#DF0E0E"
+        android:gravity="center"
+        android:text="@string/option_1"
+        android:textColor="#FAF6F6" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="67dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        android:layout_toStartOf="@+id/linlay1"
+        android:background="#DF0E0E"
+        android:gravity="center"
+        android:text="@string/option_2"
+        android:textColor="#FAF6F6" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="67dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="17dp"
+        android:layout_toStartOf="@+id/linlay1"
+        android:background="#DF0E0E"
+        android:gravity="center"
+        android:text="@string/option_3"
+        android:textColor="#FAF6F6" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="67dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="17dp"
+        android:layout_toStartOf="@+id/linlay1"
+        android:background="#DF0E0E"
+        android:gravity="center"
+        android:text="@string/option_4"
+        android:textColor="#FAF6F6" />
+
+
+</RelativeLayout>

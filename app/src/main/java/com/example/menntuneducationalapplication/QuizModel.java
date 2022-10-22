@@ -2,7 +2,7 @@ package com.example.menntuneducationalapplication;
 
 public class QuizModel {
     private int questionNo;
-    private String question;
+    public String question;
     private String option1;
     private String option2;
     private String option3;

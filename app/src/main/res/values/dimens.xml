@@ -6,4 +6,6 @@
     <dimen name="padQ">8dp</dimen>
     <dimen name="maxTitle">34sp</dimen>
     <item name="rad" type="dimen">10%</item>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

@@ -58,7 +58,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Forums"
+            android:name=".CreateForums"
             android:exported="false" />
         <activity
             android:name=".DashBoard_Temp"

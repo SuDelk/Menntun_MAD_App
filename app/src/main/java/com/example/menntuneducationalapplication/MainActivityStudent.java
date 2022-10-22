@@ -23,7 +23,7 @@ public class MainActivityStudent extends AppCompatActivity {
         startActivity(X);
     }
     public void toQuiz(View view){
-        Intent i =  new Intent(this,quizzes.class);
+        Intent i =  new Intent(this, Quizzes.class);
         startActivity(i);
     }
 }

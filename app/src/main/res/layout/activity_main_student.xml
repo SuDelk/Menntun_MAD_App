@@ -34,6 +34,7 @@
         android:layout_gravity="start"
         android:backgroundTint="#FF9800"
         android:enabled="true"
+        android:onClick="toPassPapers"
         android:text="@string/past_papers"
         android:textColor="@color/black"
         android:textColorHint="@color/white"

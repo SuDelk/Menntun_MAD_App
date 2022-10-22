@@ -67,8 +67,7 @@ public class DisplayQuiz extends AppCompatActivity {
                     Toast.makeText(DisplayQuiz.this, String.valueOf(quizModelArrayList.size()), Toast.LENGTH_SHORT).show();
                 }
                 questionCount = quizModelArrayList.size();
-                random = new Random();
-                currentPos = random.nextInt(quizModelArrayList.size());
+                currentPos = 0;
                 setDataToViews(currentPos);
                 option1Btn.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -77,7 +76,7 @@ public class DisplayQuiz extends AppCompatActivity {
                             currentScore++;
                         }
                         questionAttempted++;
-                        currentPos = random.nextInt(quizModelArrayList.size());
+                        currentPos = currentPos + 1;
                         setDataToViews(currentPos);
                     }
                 });
@@ -88,7 +87,7 @@ public class DisplayQuiz extends AppCompatActivity {
                             currentScore++;
                         }
                         questionAttempted++;
-                        currentPos = random.nextInt(quizModelArrayList.size());
+                        currentPos = currentPos + 1;
                         setDataToViews(currentPos);
                     }
                 });
@@ -99,7 +98,7 @@ public class DisplayQuiz extends AppCompatActivity {
                             currentScore++;
                         }
                         questionAttempted++;
-                        currentPos = random.nextInt(quizModelArrayList.size());
+                        currentPos = currentPos + 1;
                         setDataToViews(currentPos);
                     }
                 });
@@ -110,7 +109,7 @@ public class DisplayQuiz extends AppCompatActivity {
                             currentScore++;
                         }
                         questionAttempted++;
-                        currentPos = random.nextInt(quizModelArrayList.size());
+                        currentPos = currentPos + 1;
                         setDataToViews(currentPos);
                     }
                 });
@@ -147,7 +146,7 @@ public class DisplayQuiz extends AppCompatActivity {
     }
     private void setDataToViews(int currentPos){
         questionNumberTV.setText("Attempting Question : "+questionAttempted+ "/" + questionCount);
-        if(questionAttempted==questionCount){
+        if(questionAttempted-1==questionCount){
             showBottomSheet();
         }
         else{

@@ -64,7 +64,7 @@ public class Quizzes extends AppCompatActivity {
                         @Override
                         public void onClick(View view) {
                             Intent intent =  new Intent(Quizzes.this,DisplayQuiz.class);
-                            intent.putExtra("quizName",b1.getText().toString());
+                            intent.putExtra("quizName",quizName);
                             startActivity(intent);
                         }
                     });

@@ -21,6 +21,7 @@
     <string name="dashboard">Dashboard</string>
     <string name="quizzes">Quizzes</string>
     <string name="todo">TODO</string>
+    <string name="large_text"></string>
     <string name="todo1">TODO</string>
     <string name="subjectName">Subject Name</string>
     <string name="title_activity_reg_view">RegView</string>
@@ -44,4 +45,7 @@
     <string name="name_of_quiz">Name Of Quiz</string>
     <string name="question_number">Question Number</string>
     <string name="qForum">Ask A Question</string>
+    <string name="restart_quiz">Restart Quiz</string>
+    <string name="your_score_is">Your score is</string>
+    <string name="number_of_questions">Number Of Questions</string>
 </resources>

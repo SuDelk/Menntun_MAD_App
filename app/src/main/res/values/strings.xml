@@ -48,4 +48,9 @@
     <string name="restart_quiz">Restart Quiz</string>
     <string name="your_score_is">Your score is</string>
     <string name="number_of_questions">Number Of Questions</string>
+    <string name="test_quiz">Test Quiz</string>
+    <string name="delete">Delete</string>
+    <string name="edit_quiz">Edit Quiz</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_new_quiz">Add New Quiz</string>
 </resources>

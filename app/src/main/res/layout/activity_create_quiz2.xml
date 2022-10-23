@@ -267,5 +267,41 @@
         android:text="@string/option_4"
         android:textColor="#FAF6F6" />
 
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="227dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#CDDC39"
+        android:fontFamily="@font/archivo"
+        android:text="Back"
+        android:textColor="#0E0D0D"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="209dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="62dp"
+        android:backgroundTint="#CDDC39"
+        android:fontFamily="@font/archivo"
+        android:text="Next"
+        android:textColor="#0E0D0D"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>

@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".Quizzes">
+    tools:context=".QuizzesTutor">
 
     <LinearLayout
-        android:id="@+id/lin5"
+        android:id="@+id/lin6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="true"
@@ -50,6 +50,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/addQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0C1D77"
+        android:text="@string/add_new_quiz"
+        android:textColor="#FFEB3B"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.956" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

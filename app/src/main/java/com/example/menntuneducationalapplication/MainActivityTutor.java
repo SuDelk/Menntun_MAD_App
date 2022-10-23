@@ -6,14 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivityStudent extends AppCompatActivity {
+public class MainActivityTutor extends AppCompatActivity {
 
     //Button forumB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_student);
+        setContentView(R.layout.activity_main_tutor);
 
         //forumB=findViewById(R.id.forumBtn);
     }
@@ -23,7 +23,7 @@ public class MainActivityStudent extends AppCompatActivity {
         startActivity(X);
     }
     public void toQuiz(View view){
-        Intent i =  new Intent(this, Quizzes.class);
+        Intent i =  new Intent(this, QuizzesTutor.class);
         startActivity(i);
     }
 

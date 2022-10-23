@@ -2,21 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:id="@+id/LLScore"
+    android:id="@+id/deleteSheet"
     android:layout_height="wrap_content">
 
 
     <TextView
-        android:id="@+id/idTVScore"
+        android:id="@+id/deleteText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
         android:padding="3dp"
-        android:text="@string/your_score_is"
+        android:text=""
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="#04010B"
+        android:textColor="#9575CD"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -25,25 +25,24 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/idBtnRestart"
-            android:layout_width="153dp"
+            android:id="@+id/deleteButton"
+            android:layout_width="158dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:backgroundTint="#00BCD4"
-            android:text="@string/restart_quiz"
+            android:backgroundTint="#E41818"
+            android:text="@string/delete"
             android:textAllCaps="false"
-            android:textColor="#000000" />
+            android:textColor="#FFEB3B" />
 
         <Button
-            android:id="@+id/idBtnDone"
-            android:layout_width="0dp"
+            android:id="@+id/deleteCancel"
+            android:layout_width="158dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="#00BCD4"
-            android:text="Done"
+            android:backgroundTint="#FFC107"
+            android:text="@string/cancel"
             android:textAllCaps="false"
-            android:textColor="#000000" />
+            android:textColor="#B80716" />
     </LinearLayout>
 
 

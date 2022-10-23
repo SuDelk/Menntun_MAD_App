@@ -67,8 +67,7 @@ public class DisplayQuiz extends AppCompatActivity {
                     Toast.makeText(DisplayQuiz.this, String.valueOf(quizModelArrayList.size()), Toast.LENGTH_SHORT).show();
                 }
                 questionCount = quizModelArrayList.size();
-                random = new Random();
-                currentPos = random.nextInt(quizModelArrayList.size());
+                currentPos = 0;
                 setDataToViews(currentPos);
                 option1Btn.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -77,7 +76,7 @@ public class DisplayQuiz extends AppCompatActivity {
                             currentScore++;
                         }
                         questionAttempted++;
-                        currentPos = random.nextInt(quizModelArrayList.size());
+                        currentPos = currentPos + 1;
                         setDataToViews(currentPos);
                     }
                 });
@@ -88,7 +87,7 @@ public class DisplayQuiz extends AppCompatActivity {
                             currentScore++;
                         }
                         questionAttempted++;
-                        currentPos = random.nextInt(quizModelArrayList.size());
+                        currentPos = currentPos + 1;
                         setDataToViews(currentPos);
                     }
                 });
@@ -99,7 +98,7 @@ public class DisplayQuiz extends AppCompatActivity {
                             currentScore++;
                         }
                         questionAttempted++;
-                        currentPos = random.nextInt(quizModelArrayList.size());
+                        currentPos = currentPos + 1;
                         setDataToViews(currentPos);
                     }
                 });
@@ -110,7 +109,7 @@ public class DisplayQuiz extends AppCompatActivity {
                             currentScore++;
                         }
                         questionAttempted++;
-                        currentPos = random.nextInt(quizModelArrayList.size());
+                        currentPos = currentPos + 1;
                         setDataToViews(currentPos);
                     }
                 });
@@ -130,27 +129,38 @@ public class DisplayQuiz extends AppCompatActivity {
         View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.score_bottom_sheet,(LinearLayout)findViewById(R.id.LLScore));
         TextView scoreTV = bottomSheetView.findViewById(R.id.idTVScore);
         Button restartQuizBtn = bottomSheetView.findViewById(R.id.idBtnRestart);
+        Button doneBtn = bottomSheetView.findViewById(R.id.idBtnDone);
+
         scoreTV.setText("Your Score is \n" + currentScore + "/" +questionCount);
         restartQuizBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentPos = random.nextInt(quizModelArrayList.size());
+                currentPos = 0;
                 setDataToViews(currentPos);
                 questionAttempted = 1;
                 currentScore = 0 ;
                 bottomSheetDialog.dismiss();
             }
         });
+        doneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DisplayQuiz.this, MainActivityStudent.class);
+                startActivity(intent);
+            }
+        });
+
+
         bottomSheetDialog.setCancelable(false);
         bottomSheetDialog.setContentView(bottomSheetView);
         bottomSheetDialog.show();
     }
     private void setDataToViews(int currentPos){
-        questionNumberTV.setText("Attempting Question : "+questionAttempted+ "/" + questionCount);
-        if(questionAttempted==questionCount){
+        if(questionAttempted-1==questionCount){
             showBottomSheet();
         }
         else{
+            questionNumberTV.setText("Attempting Question : "+questionAttempted+ "/" + questionCount);
             questionTV.setText(quizModelArrayList.get(currentPos).getQuestion());
             option1Btn.setText(quizModelArrayList.get(currentPos).getOption1());
             option2Btn.setText(quizModelArrayList.get(currentPos).getOption2());

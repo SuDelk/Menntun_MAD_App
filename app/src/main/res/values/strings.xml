@@ -53,4 +53,6 @@
     <string name="edit_quiz">Edit Quiz</string>
     <string name="cancel">Cancel</string>
     <string name="add_new_quiz">Add New Quiz</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
 </resources>

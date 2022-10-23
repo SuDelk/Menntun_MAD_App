@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.example.menntuneducationalapplication.CreateQuiz1;
 import com.example.menntuneducationalapplication.MainActivityStudent;
+import com.example.menntuneducationalapplication.MainActivityTutor;
 import com.example.menntuneducationalapplication.R;
 import com.example.menntuneducationalapplication.RegView;
 
@@ -24,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(X);
     }
     public void TutorLogin(View view){
-        Intent i =  new Intent(this, CreateQuiz1.class);
+        Intent i =  new Intent(this, MainActivityTutor.class);
         startActivity(i);
     }
     public void Register(View view){

@@ -26,4 +26,9 @@ public class MainActivityStudent extends AppCompatActivity {
         Intent i =  new Intent(this, Quizzes.class);
         startActivity(i);
     }
+
+    public void toPassPapers(View view){
+        Intent i =  new Intent(this, PastPapers.class);
+        startActivity(i);
+    }
 }

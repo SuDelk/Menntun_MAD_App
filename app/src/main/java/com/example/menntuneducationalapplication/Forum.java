@@ -5,8 +5,10 @@ public class Forum {
     String Subject;
     String [] Answers;
 
-    public Forum(String question) {
+    public Forum(String question,String subject) {
         Question = question;
+        Subject = subject;
+        Answers = null;
     }
 
     public String getQuestion() {

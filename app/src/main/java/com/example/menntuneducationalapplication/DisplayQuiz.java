@@ -145,8 +145,7 @@ public class DisplayQuiz extends AppCompatActivity {
         doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DisplayQuiz.this, MainActivityStudent.class);
-                startActivity(intent);
+                finish();
             }
         });
 

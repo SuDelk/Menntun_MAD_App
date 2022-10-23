@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -23,14 +24,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 
 public class CreateQuiz2 extends AppCompatActivity {
     TextView quizNameView,questionNumberView;
     EditText question,option1,option2,option3,option4;
-    Button optionBtn1,optionBtn2,optionBtn3,optionBtn4;
+    Button optionBtn1,optionBtn2,optionBtn3,optionBtn4,back,next;
     int currentPos = 0,questionCount;
     String Question,Option1,Option2,Option3,Option4,Answer,quizName;
     DatabaseReference insertQuizQuestion;
+     ArrayList<QuizModel> quizModelArrayList;
     long maxId = 0;
 
     @Override
@@ -49,8 +53,9 @@ public class CreateQuiz2 extends AppCompatActivity {
         insertQuizQuestion.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists())
+                if(snapshot.exists()){
                     maxId = snapshot.getChildrenCount();
+                }
             }
 
             @Override
@@ -58,6 +63,7 @@ public class CreateQuiz2 extends AppCompatActivity {
 
             }
         });
+        checkDBForData();
 
         question = findViewById(R.id.IdTVQuestion);
         option1 = findViewById(R.id.option1Txt);
@@ -70,10 +76,14 @@ public class CreateQuiz2 extends AppCompatActivity {
         optionBtn3 = findViewById(R.id.Option3);
         optionBtn4 = findViewById(R.id.Option4);
 
+        back = findViewById(R.id.backBtn);
+        next = findViewById(R.id.nextBtn);
+
         optionBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(currentPos != questionCount) {
+                    checkDBForData();
                     Question = question.getText().toString();
                     Option1 = option1.getText().toString();
                     Option2 = option2.getText().toString();
@@ -89,6 +99,7 @@ public class CreateQuiz2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(currentPos != questionCount) {
+                    checkDBForData();
                     Question = question.getText().toString();
                     Option1 = option1.getText().toString();
                     Option2 = option2.getText().toString();
@@ -104,6 +115,7 @@ public class CreateQuiz2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(currentPos != questionCount) {
+                    checkDBForData();
                     Question = question.getText().toString();
                     Option1 = option1.getText().toString();
                     Option2 = option2.getText().toString();
@@ -119,6 +131,7 @@ public class CreateQuiz2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(currentPos != questionCount) {
+                    checkDBForData();
                     Question = question.getText().toString();
                     Option1 = option1.getText().toString();
                     Option2 = option2.getText().toString();
@@ -129,6 +142,35 @@ public class CreateQuiz2 extends AppCompatActivity {
                 }
             }
         });
+       back.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               if(currentPos!=0){
+                   currentPos--;
+                   questionNumberView.setText("Question " + (currentPos + 1) + "/" + questionCount);
+                   checkDBForData();
+               }
+               else{
+                   finish();
+               }
+           }
+       });
+       next.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Question = question.getText().toString();
+               Option1 = option1.getText().toString();
+               Option2 = option2.getText().toString();
+               Option3 = option3.getText().toString();
+               Option4 = option4.getText().toString();
+               if(Question.length() == 0 || Option1.length() == 0 || Option2.length() == 0 || Option3.length() == 0 || Option4.length() == 0){
+                   Toast.makeText(CreateQuiz2.this, "Enter Details and Select Option", Toast.LENGTH_LONG).show();
+               }else{
+                   insertQuizQuestionToDB();
+                   checkDBForData();
+               }
+           }
+       });
     }
     private void showBottomSheet(){
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(CreateQuiz2.this);
@@ -140,8 +182,7 @@ public class CreateQuiz2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 bottomSheetDialog.dismiss();
-                Intent intent = new Intent(CreateQuiz2.this, LoginActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
         bottomSheetDialog.setCancelable(false);
@@ -168,7 +209,7 @@ public class CreateQuiz2 extends AppCompatActivity {
             }
         }else {
             QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
-            insertQuizQuestion.child(String.valueOf(maxId+1)).setValue(newQuestion);
+            insertQuizQuestion.child(String.valueOf(currentPos)).setValue(newQuestion);
             Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
             question.setText("");
             option1.setText("");
@@ -182,6 +223,26 @@ public class CreateQuiz2 extends AppCompatActivity {
             }
         }
     }
+    private void checkDBForData(){
+        DatabaseReference dbRefToRet = FirebaseDatabase.getInstance().getReference();
+        dbRefToRet.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                DataSnapshot ds = snapshot.child("Quiz").child(quizName).child(String.valueOf(currentPos+1));
+                if(ds.child("question").getValue()!=null){
+                    question.setText(String.valueOf(ds.child("question").getValue()));
+                    option1.setText(String.valueOf(ds.child("option1").getValue()));
+                    option2.setText(String.valueOf(ds.child("option2").getValue()));
+                    option3.setText(String.valueOf(ds.child("option3").getValue()));
+                    option4.setText(String.valueOf(ds.child("option4").getValue()));
+                    Answer = String.valueOf(ds.child("answer").getValue());
+                }
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+    }
 }

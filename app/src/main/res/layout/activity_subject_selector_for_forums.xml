@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubjectSelectorForForums"
+    android:background="@drawable/bgl">
+
+    <Button
+        android:id="@+id/BTM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="147dp"
+        android:layout_marginEnd="161dp"
+        android:onClick="intoSelectionWithMath"
+        android:text="@string/mathematics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BTH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="161dp"
+        android:onClick="intoSelectionWithHis"
+        android:text="@string/history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BTM" />
+
+    <Button
+        android:id="@+id/BTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="161dp"
+        android:onClick="intoSelectionWithPhy"
+        android:text="@string/phy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BTH" />
+
+    <Button
+        android:id="@+id/BTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="159dp"
+        android:onClick="intoSelectionWithSpo"
+        android:text="@string/sports"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BTG" />
+
+    <Button
+        android:id="@+id/BTG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="159dp"
+        android:onClick="intoSelectionWithGeo"
+        android:text="@string/geo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BTP" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="404dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="98dp"
+        android:background="#FFE500"
+        android:backgroundTint="#FFBF00"
+        android:fontFamily="@font/aldrich"
+        android:text="@string/cs"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

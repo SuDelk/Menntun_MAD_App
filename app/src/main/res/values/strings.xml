@@ -55,4 +55,14 @@
     <string name="add_new_quiz">Add New Quiz</string>
     <string name="back">Back</string>
     <string name="next">Next</string>
+    <string name="sports">Sports</string>
+    <string name="history">History</string>
+    <string name="mathematics">Mathematics</string>
+    <string name="phy">Physics</string>
+    <string name="geo">Geography</string>
+    <string name="cs">Choose A Subject</string>
+    <string name="createForum">Post In Forum</string>
+    <string name="check">Forums Discussions</string>
+    <string name="opt">Choose Option</string>
+    <string name="post">Post</string>
 </resources>

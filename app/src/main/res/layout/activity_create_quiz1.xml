@@ -41,16 +41,17 @@
         android:backgroundTint="#AE0337F4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.273">
+        app:layout_constraintVertical_bias="0.265">
 
     </FrameLayout>
 
     <EditText
         android:id="@+id/quizName1"
-        android:layout_width="184dp"
-        android:layout_height="62dp"
+        android:layout_width="201dp"
+        android:layout_height="70dp"
         android:autofillHints=""
         android:backgroundTint="#071040"
         android:ems="10"
@@ -61,15 +62,15 @@
         android:textColorHint="#B90E0D0D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.713"
+        app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.222" />
+        app:layout_constraintVertical_bias="0.22" />
 
     <EditText
         android:id="@+id/noOfQues"
-        android:layout_width="184dp"
-        android:layout_height="71dp"
+        android:layout_width="201dp"
+        android:layout_height="70dp"
         android:autofillHints=""
         android:backgroundTint="#071040"
         android:ems="10"
@@ -80,10 +81,10 @@
         android:textColorHint="#B90E0D0D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.713"
+        app:layout_constraintHorizontal_bias="0.778"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quizName1"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <Button
         android:id="@+id/createQuizBtn"
@@ -128,9 +129,9 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346" />
+        app:layout_constraintVertical_bias="0.341" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

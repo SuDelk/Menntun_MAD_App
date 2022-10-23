@@ -49,6 +49,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".PastPapers"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CreateQuiz2"
             android:exported="false">
             <meta-data

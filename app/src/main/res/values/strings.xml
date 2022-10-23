@@ -21,7 +21,6 @@
     <string name="dashboard">Dashboard</string>
     <string name="quizzes">Quizzes</string>
     <string name="todo">TODO</string>
-    <string name="large_text"></string>
     <string name="todo1">TODO</string>
     <string name="subjectName">Subject Name</string>
     <string name="title_activity_reg_view">RegView</string>
@@ -53,4 +52,8 @@
     <string name="edit_quiz">Edit Quiz</string>
     <string name="cancel">Cancel</string>
     <string name="add_new_quiz">Add New Quiz</string>
+    <string name="AddPastPapers">Add Past Papers</string>
+    <string name="TutorPastPaper">Past Paper</string>
+    <string name="tutorpastPaper">Past Paper</string>
+    <string name="toPastPaperTutor">toPastPaperTutor</string>
 </resources>

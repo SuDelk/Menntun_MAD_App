@@ -114,7 +114,7 @@
         android:gravity="center"
         android:includeFontPadding="false"
         android:text="test"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
         android:textColor="#0C0C0C"
         android:textSize="30sp"
         android:textStyle="bold" />

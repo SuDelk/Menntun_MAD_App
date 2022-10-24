@@ -54,6 +54,8 @@
     <string name="add_new_quiz">Add New Quiz</string>
     <string name="back">Back</string>
     <string name="next">Next</string>
+    <string name="username">Username</string>
+    <string name="fullName">Full Name</string>
     <string name="sports">Sports</string>
     <string name="history">History</string>
     <string name="mathematics">Mathematics</string>

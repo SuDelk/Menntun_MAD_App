@@ -1,5 +1,6 @@
 package com.example.menntuneducationalapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,12 +10,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.menntuneducationalapplication.ui.login.LoginActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class RegTutor extends AppCompatActivity {
-    EditText tutUn ;
-    EditText tutPwd ;
+    EditText tutUn,tutPwd,tutBday,tutPhone,tutName,tutEmail,tutPwd2;
     Button insertTut;
 
     DatabaseReference tutDbRef;
@@ -25,7 +29,12 @@ public class RegTutor extends AppCompatActivity {
         setContentView(R.layout.activity_reg_tutor);
 
         tutUn = findViewById(R.id.tutUN);
+        tutName = findViewById(R.id.tutName);
+        tutEmail = findViewById(R.id.tutEmailAddress);
+        tutBday = findViewById(R.id.tutBday);
+        tutPhone = findViewById(R.id.tutPhone);
         tutPwd = findViewById(R.id.tutPWD);
+        tutPwd2 = findViewById(R.id.tutPWD2);
         insertTut = findViewById(R.id.regTutFinal);
 
         tutDbRef = FirebaseDatabase.getInstance().getReference().child("Tutors");
@@ -33,20 +42,70 @@ public class RegTutor extends AppCompatActivity {
         insertTut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                insertTutorData();
+                checkDBForDataAndInsert();
             }
         });
     }
-    private void insertTutorData(){
+    private void checkDBForDataAndInsert(){
         String un = tutUn.getText().toString();
         String pwd = tutPwd.getText().toString();
-        
-        Tutors tutors = new Tutors(un,pwd);
-        
-        tutDbRef.push().setValue(tutors);
-        Toast.makeText(RegTutor.this, "Tutor Account Created", Toast.LENGTH_SHORT).show();
+        String email = tutEmail.getText().toString();
+        String bday = tutBday.getText().toString();
+        String phone = tutPhone.getText().toString();
+        String name = tutName.getText().toString();
+        String pwd2 = tutPwd2.getText().toString();
 
-        Intent intent = new Intent(this,MainActivityStudent.class);
-        startActivity(intent);
+        DatabaseReference dbRefToRet = FirebaseDatabase.getInstance().getReference();
+        dbRefToRet.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                DataSnapshot ds = snapshot.child("Tutors").child(tutUn.getText().toString());
+                if(ds.child("username").getValue()!=null){
+                    Toast.makeText(RegTutor.this, "Username is already in use!", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    if(un.length()==0|| pwd.length()==0||email.length()==0||bday.length()==0||phone.length()==0||name.length()==0||pwd2.length()==0){
+                        if(un.length()==0){
+                            tutUn.setError("Enter a new Username");
+                        }
+                        else if( pwd.length()==0){
+                            tutPwd.setError("Enter a password");
+                        }
+                        else if( email.length()==0){
+                            tutEmail.setError("Enter an Email Address");
+                        }
+                        else if( bday.length()==0){
+                            tutBday.setError("Enter your Birth Date");
+                        }
+                        else if( phone.length()==0){
+                            tutPhone.setError("Enter phone number");
+                        }
+                        else if( name.length()==0){
+                            tutName.setError("Enter Full Name");
+                        }
+                        else if( pwd2.length()==0){
+                            tutPwd2.setError("Enter confirm password");
+                        }
+                    }
+                    else if(!pwd.equals(pwd2)){
+                        Toast.makeText(RegTutor.this, "Confirmation password doesn't match.", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Tutors tutors = new Tutors(un,pwd,name,email,bday,phone);
+
+                        tutDbRef.child(un).setValue(tutors);
+                        Toast.makeText(RegTutor.this, "Tutor Account Created", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(RegTutor.this, LoginActivity.class);
+                        startActivity(intent);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }

@@ -21,7 +21,6 @@
     <string name="dashboard">Dashboard</string>
     <string name="quizzes">Quizzes</string>
     <string name="todo">TODO</string>
-    <string name="large_text"></string>
     <string name="todo1">TODO</string>
     <string name="subjectName">Subject Name</string>
     <string name="title_activity_reg_view">RegView</string>
@@ -55,6 +54,8 @@
     <string name="add_new_quiz">Add New Quiz</string>
     <string name="back">Back</string>
     <string name="next">Next</string>
+    <string name="username">Username</string>
+    <string name="fullName">Full Name</string>
     <string name="sports">Sports</string>
     <string name="history">History</string>
     <string name="mathematics">Mathematics</string>
@@ -65,4 +66,21 @@
     <string name="check">Forums Discussions</string>
     <string name="opt">Choose Option</string>
     <string name="post">Post</string>
+    <string name="AddPastPapers">Add Past Papers</string>
+    <string-array name="year">
+        <item>2022</item>
+        <item>2023</item>
+        <item>2021</item>
+    </string-array>
+    <string name="TutorPastPaper">Past Paper</string>
+    <string name="tutorpastPaper">Past Paper</string>
+    <string name="toPastPaperTutor">toPastPaperTutor</string>
+    <string name="btnpp">btnpp</string>
+    <string name="Subject">Subject</string>
+    <string name="Year">Year</string>
+    <string name="Grade">Grade</string>
+    <string name="UploadPP">Upload Past Paper</string>
+    <string name="UploadPPtext">Upload</string>
+
+
 </resources>

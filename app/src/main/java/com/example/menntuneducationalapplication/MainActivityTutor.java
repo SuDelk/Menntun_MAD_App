@@ -5,17 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivityTutor extends AppCompatActivity {
 
-    //Button forumB;
+    TextView name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_tutor);
 
-        //forumB=findViewById(R.id.forumBtn);
+        name = findViewById(R.id.nameOfTut);
+        name.setText(GlobalTutor._NAME);
     }
 
     public void toForum(View view){
@@ -29,6 +31,10 @@ public class MainActivityTutor extends AppCompatActivity {
 
     public void toPassPapers(View view){
         Intent z =  new Intent(this, PastPaperTutor.class);
+        startActivity(z);
+    }
+    public void toProfile(View view){
+        Intent z =  new Intent(this, TutorProfile.class);
         startActivity(z);
     }
 }

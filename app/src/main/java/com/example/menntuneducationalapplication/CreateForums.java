@@ -57,6 +57,7 @@ public class CreateForums extends AppCompatActivity {
 
     public void intoForums(View view){
         Intent X = new Intent(this,DisplayForum.class);
+        X.putExtra("Subject",sub);
         startActivity(X);
     }
 }

@@ -54,6 +54,8 @@
     <string name="add_new_quiz">Add New Quiz</string>
     <string name="back">Back</string>
     <string name="next">Next</string>
+    <string name="username">Username</string>
+    <string name="fullName">Full Name</string>
     <string name="sports">Sports</string>
     <string name="history">History</string>
     <string name="mathematics">Mathematics</string>
@@ -64,6 +66,13 @@
     <string name="check">Forums Discussions</string>
     <string name="opt">Choose Option</string>
     <string name="post">Post</string>
+    <string name="sr">See Replies</string>
+    <string name="eR">Edit Question/Replies</string>
+    <string name="dr">Delete Question/Reply</string>
+    <string name="reply">Reply</string>
+    <string name="response">Enter Your Reply</string>
+    <string name="edit">Edit</string>
+    <string name="DEl">Delete</string>
     <string name="AddPastPapers">Add Past Papers</string>
     <string-array name="year">
         <item>2022</item>

@@ -3,10 +3,13 @@ package com.example.menntuneducationalapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -18,6 +21,7 @@ public class DisplayForum extends AppCompatActivity {
 
     Button bt;
     LinearLayout parent;
+    String sub;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,18 +29,35 @@ public class DisplayForum extends AppCompatActivity {
         setContentView(R.layout.activity_display_forum);
 
         parent = (LinearLayout)findViewById(R.id.rootlayout);
+        sub=getIntent().getStringExtra("Subject");
         DatabaseReference dbRef = FirebaseDatabase.getInstance().getReferenceFromUrl("https://menntun-4ae5e-default-rtdb.firebaseio.com/");
         dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.child("Forums").getChildren()){
-                    String forumQ=dataSnapshot.getKey();
+                    String subjectFilter = String.valueOf(dataSnapshot.child("subject").getValue());
+                    String forumQ = dataSnapshot.getKey();
 
-                    bt = new Button(DisplayForum.this);
-                    bt.setText(forumQ);
-                    bt.setBackgroundResource(R.color.buttonOrange);
-                    bt.setTextSize(20);
-                    parent.addView(bt);
+                    //Toast.makeText(DisplayForum.this, subjectFilter, Toast.LENGTH_SHORT).show();
+
+                    if(subjectFilter.equals(sub)) {
+
+                        bt = new Button(DisplayForum.this);
+                        bt.setText(forumQ);
+                        bt.setBackgroundResource(R.color.buttonOrange);
+                        bt.setTextSize(20);
+                        parent.addView(bt);
+
+                        bt.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent X = new Intent(DisplayForum.this,ForumOption.class);
+                                X.putExtra("Q",forumQ);
+                                startActivity(X);
+                            }
+                        });
+                    }
+
                 }
             }
 
@@ -45,6 +66,8 @@ public class DisplayForum extends AppCompatActivity {
 
             }
         });
+
+        Toast.makeText(this, "Hello "+sub, Toast.LENGTH_SHORT).show();
 
     }
 }

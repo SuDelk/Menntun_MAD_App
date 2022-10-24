@@ -4,11 +4,18 @@ public class Forum {
     String Question;
     String Subject;
     String [] Answers;
+    int noOfReplies;
+
 
     public Forum(String question,String subject) {
         Question = question;
         Subject = subject;
-        Answers = null;
+        Answers = new String[10];
+        noOfReplies=0;
+
+    }
+    public void setAnswers(String X){
+        Answers[noOfReplies++]=X;
     }
 
     public String getQuestion() {

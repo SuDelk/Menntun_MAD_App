@@ -37,6 +37,7 @@ public class ForumTypeSelector extends AppCompatActivity {
 
     public void intoForumDiscussion(View view){
         Intent X = new Intent(this,DisplayForum.class);
+        X.putExtra("Subject",subject);
         startActivity(X);
     }
 }

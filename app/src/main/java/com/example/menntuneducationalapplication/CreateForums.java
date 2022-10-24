@@ -42,8 +42,7 @@ public class CreateForums extends AppCompatActivity {
 
     }
 
-    public void insertIntoForumDB(){
-
+    private void insertIntoForumDB(){
         String Q=edt.getText().toString();
         Forum ff= new Forum(Q,sub);
         if(Q.isEmpty()){

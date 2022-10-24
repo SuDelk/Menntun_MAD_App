@@ -44,27 +44,55 @@
 
     <EditText
         android:id="@+id/subjectPP"
-        android:layout_width="212dp"
+        android:layout_width="329dp"
         android:layout_height="54dp"
-        android:layout_marginTop="180dp"
-        android:background="#1C1313"
-        android:backgroundTint="#E48B8B"
+        android:layout_marginTop="4dp"
+        android:background="#5488C68A"
         android:ems="10"
         android:hint="@string/Subject"
         android:textColor="#120606"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/SubjectTextPP" />
 
     <TextView
         android:id="@+id/Year"
         android:layout_width="83dp"
         android:layout_height="32dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginTop="272dp"
         android:background="#8AE48D"
         android:text="@string/Year"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SubjectTextPP"
+        android:layout_width="83dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="160dp"
+        android:background="#8AE48D"
+        android:text="@string/SubjectPP"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gradePP"
+        android:layout_width="83dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="412dp"
+        android:background="#8AE48D"
+        android:text="@string/gradttext"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,41 +102,26 @@
 
     <Spinner
         android:id="@+id/yearSpinner"
-        android:layout_width="345dp"
-        android:layout_height="65dp"
+        android:layout_width="348dp"
+        android:layout_height="56dp"
         android:layout_below="@+id/Year"
-        android:entries="@array/year"
         android:layout_centerHorizontal="true"
         android:background="@android:drawable/btn_dropdown"
         android:contentDescription="@string/TutorPastPaper"
+        android:entries="@array/year"
+        android:foregroundTint="#130E0E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/Year"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="@+id/Year"
         app:layout_constraintTop_toBottomOf="@+id/Year"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/GradePP"
-        android:layout_width="284dp"
-        android:layout_height="68dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/Grade"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.299"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.627"
-        tools:ignore="MissingConstraints" />
-
+        app:layout_constraintVertical_bias="0.044" />
 
     <Button
         android:id="@+id/submitPP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#D500F9"
+        android:backgroundTint="#0B430C"
 
         android:text="SUBMIT"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -118,29 +131,53 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.948" />
 
+
+
     <Button
-        android:id="@+id/UploadPP"
+        android:id="@+id/UploadPPbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#BC1F8878"
         android:text="@string/UploadPP"
+        android:radius="22pt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.762"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toEndOf="@+id/UploadPPtext"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        app:layout_constraintVertical_bias="0.796" />
 
-    <TextView
+    <Spinner
+        android:id="@+id/gradepp"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="224dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:contentDescription="@string/gradePPspinner"
+        android:entries="@array/grade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/gradePP"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gradePP"
+        app:layout_constraintTop_toBottomOf="@+id/gradePP"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
         android:id="@+id/UploadPPtext"
-        android:layout_width="83dp"
-        android:layout_height="43dp"
+        android:layout_width="93dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="36dp"
+        android:background="#9FBF89"
+        android:backgroundTint="#64AC5E"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:text="@string/UploadPPtext"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/UploadPP"
-        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784" />
+        app:layout_constraintVertical_bias="0.789" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

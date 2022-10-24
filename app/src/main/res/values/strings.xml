@@ -66,11 +66,23 @@
     <string name="check">Forums Discussions</string>
     <string name="opt">Choose Option</string>
     <string name="post">Post</string>
+    <string name="sr">See Replies</string>
+    <string name="eR">Edit Question/Replies</string>
+    <string name="dr">Delete Question/Reply</string>
+    <string name="reply">Reply</string>
+    <string name="response">Enter Your Reply</string>
+    <string name="edit">Edit</string>
+    <string name="DEl">Delete</string>
     <string name="AddPastPapers">Add Past Papers</string>
     <string-array name="year">
         <item>2022</item>
         <item>2023</item>
         <item>2021</item>
+    </string-array>
+    <string-array name="grade">
+        <item>Grade 6</item>
+        <item>Grade 7</item>
+        <item>Grade 8</item>
     </string-array>
     <string name="TutorPastPaper">Past Paper</string>
     <string name="tutorpastPaper">Past Paper</string>
@@ -82,6 +94,10 @@
     <string name="UploadPP">Upload Past Paper</string>
     <string name="UploadPPtext">Upload</string>
     <string name="updtStd">Update</string>
+    <string name="gradttext">Grade</string>
+    <string name="gradePPSpinner">gradePP</string>
+    <string name="gradePPspinner">gradePPspinner</string>
+    <string name="SubjectPP">Subject</string>
 
 
 </resources>

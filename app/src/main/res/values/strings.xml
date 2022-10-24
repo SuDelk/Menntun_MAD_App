@@ -79,6 +79,11 @@
         <item>2023</item>
         <item>2021</item>
     </string-array>
+    <string-array name="grade">
+        <item>Grade 6</item>
+        <item>Grade 7</item>
+        <item>Grade 8</item>
+    </string-array>
     <string name="TutorPastPaper">Past Paper</string>
     <string name="tutorpastPaper">Past Paper</string>
     <string name="toPastPaperTutor">toPastPaperTutor</string>
@@ -88,6 +93,10 @@
     <string name="Grade">Grade</string>
     <string name="UploadPP">Upload Past Paper</string>
     <string name="UploadPPtext">Upload</string>
+    <string name="gradttext">Grade</string>
+    <string name="gradePPSpinner">gradePP</string>
+    <string name="gradePPspinner">gradePPspinner</string>
+    <string name="SubjectPP">Subject</string>
 
 
 </resources>

@@ -28,7 +28,7 @@ public class MainActivityTutor extends AppCompatActivity {
     }
 
     public void toPassPapers(View view){
-        Intent z =  new Intent(this, PastPapers.class);
+        Intent z =  new Intent(this, PastPaperTutor.class);
         startActivity(z);
     }
 }

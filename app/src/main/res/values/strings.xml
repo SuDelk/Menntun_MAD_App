@@ -81,6 +81,7 @@
     <string name="Grade">Grade</string>
     <string name="UploadPP">Upload Past Paper</string>
     <string name="UploadPPtext">Upload</string>
+    <string name="updtStd">Update</string>
 
 
 </resources>

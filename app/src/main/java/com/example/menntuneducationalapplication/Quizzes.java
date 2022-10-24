@@ -35,19 +35,6 @@ public class Quizzes extends AppCompatActivity {
 
         parent = (LinearLayout)findViewById(R.id.lin5);
 
-//        for(int i = 0; i<3;i++){
-//            b1 = new Button(Quizzes.this);
-//            b1.setId((i+1));
-//            b1.setText(btn_name[i]);
-//            b1.setTag(i);
-//            parent.addView(b1);
-//            b1.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//
-//                }
-//            });
-//        }
 
         DatabaseReference dbRef = FirebaseDatabase.getInstance().getReferenceFromUrl("https://menntun-4ae5e-default-rtdb.firebaseio.com/");
         dbRef.addListenerForSingleValueEvent(new ValueEventListener() {

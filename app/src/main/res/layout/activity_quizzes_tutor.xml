@@ -49,17 +49,21 @@
 
     <Button
         android:id="@+id/addQuiz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="195dp"
+        android:layout_height="69dp"
         android:backgroundTint="#0C1D77"
+        android:fontFamily="@font/aclonica"
         android:text="@string/add_new_quiz"
         android:textColor="#FFEB3B"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956" />
+        app:layout_constraintVertical_bias="0.961"
+        app:strokeColor="#00BCD4"
+        app:strokeWidth="2dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

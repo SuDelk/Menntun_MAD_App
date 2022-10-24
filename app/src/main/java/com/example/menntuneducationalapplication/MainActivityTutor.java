@@ -19,7 +19,7 @@ public class MainActivityTutor extends AppCompatActivity {
     }
 
     public void toForum(View view){
-        Intent X=new Intent(this, CreateForums.class);
+        Intent X=new Intent(this, SubjectSelectorForForums.class);
         startActivity(X);
     }
     public void toQuiz(View view){
@@ -28,7 +28,7 @@ public class MainActivityTutor extends AppCompatActivity {
     }
 
     public void toPassPapers(View view){
-        Intent z =  new Intent(this, PastPapers.class);
+        Intent z =  new Intent(this, PastPaperTutor.class);
         startActivity(z);
     }
 }

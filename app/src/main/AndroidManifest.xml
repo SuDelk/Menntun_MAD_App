@@ -15,6 +15,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MenntunEducationalApplication"
         tools:targetApi="31">
+
+        <activity
+            android:name=".ForumTypeSelector"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SubjectSelectorForForums"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".DisplayForum"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false">
@@ -65,6 +87,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".PastPaperTutor"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AddPastPapers"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CreateQuiz2"
             android:exported="false">
             <meta-data
@@ -101,6 +137,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".CreateForums"
             android:exported="false" />

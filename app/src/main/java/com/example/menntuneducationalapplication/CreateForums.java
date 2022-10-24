@@ -2,6 +2,7 @@ package com.example.menntuneducationalapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,8 @@ public class CreateForums extends AppCompatActivity {
 
     EditText edt;
     Button btn;
+    Button btn2;
+    String qName,sub;
 
     DatabaseReference db;
 
@@ -22,11 +25,13 @@ public class CreateForums extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_forums);
-
+        sub=getIntent().getStringExtra("Subject");
         edt = findViewById(R.id.question);
         btn = findViewById(R.id.raise);
+        btn2 = findViewById(R.id.viewForums);
+        qName = edt.getText().toString();
 
-        db = FirebaseDatabase.getInstance().getReference().child("Forums");
+        db = FirebaseDatabase.getInstance().getReference().child("Forums").child(qName);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,15 +39,24 @@ public class CreateForums extends AppCompatActivity {
                 insertIntoForumDB();
             }
         });
+
     }
 
     public void insertIntoForumDB(){
 
         String Q=edt.getText().toString();
-        Forum ff= new Forum(Q);
+        Forum ff= new Forum(Q,sub);
+        if(Q.isEmpty()){
+            Toast.makeText(this,"Can not raise empty field",Toast.LENGTH_SHORT).show();
+        }else {
 
-        db.push().setValue(ff);
-        Toast.makeText(this,"Question Raised",Toast.LENGTH_SHORT).show();
+            db.child(Q).setValue(ff);
+            Toast.makeText(this, "Question Raised", Toast.LENGTH_SHORT).show();
+        }
+    }
 
+    public void intoForums(View view){
+        Intent X = new Intent(this,DisplayForum.class);
+        startActivity(X);
     }
 }

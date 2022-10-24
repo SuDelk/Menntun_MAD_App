@@ -52,31 +52,20 @@
     <string name="edit_quiz">Edit Quiz</string>
     <string name="cancel">Cancel</string>
     <string name="add_new_quiz">Add New Quiz</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="AddPastPapers">Add Past Papers</string>
+    <string-array name="year">
+        <item>2022</item>
+        <item>2023</item>
+        <item>2021</item>
+    </string-array>
     <string name="TutorPastPaper">Past Paper</string>
     <string name="tutorpastPaper">Past Paper</string>
     <string name="toPastPaperTutor">toPastPaperTutor</string>
     <string name="btnpp">btnpp</string>
     <string name="Subject">Subject</string>
+    <string name="Year">Year</string>
+    <string name="Grade">Grade</string>
+    <string name="UploadPP">Upload Past Paper</string>
+    <string name="UploadPPtext">Upload</string>
+
 </resources>

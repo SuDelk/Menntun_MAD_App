@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class DisplayQuizDif extends AppCompatActivity {
     Button HeadBtn,Delete,Edit,Test;
-    String quizName;
+    String quizName,questionCount;
     DatabaseReference databaseReference;
 
     @Override
@@ -26,6 +26,7 @@ public class DisplayQuizDif extends AppCompatActivity {
         setContentView(R.layout.activity_display_quiz_dif);
 
         quizName = getIntent().getStringExtra("quizName");
+        questionCount = getIntent().getStringExtra("questionCount");
         HeadBtn = findViewById(R.id.headingBtn);
         Delete = findViewById(R.id.deleteQuiz);
         Edit = findViewById(R.id.editQuiz);
@@ -38,6 +39,24 @@ public class DisplayQuizDif extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showBottomSheetDelete();
+            }
+        });
+        Edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DisplayQuizDif.this,CreateQuiz2.class);
+                intent.putExtra("quizName",quizName);
+                intent.putExtra("questionCount",questionCount);
+                startActivity(intent);
+            }
+        });
+        Test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DisplayQuizDif.this,DisplayQuiz.class);
+                intent.putExtra("quizName",quizName);
+                intent.putExtra("questionCount",questionCount);
+                startActivity(intent);
             }
         });
     }

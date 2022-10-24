@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,6 +37,7 @@ public class QuizzesTutor extends AppCompatActivity {
                 int count = 0;
                 for(DataSnapshot dataSnapshot : snapshot.child("Quiz").getChildren()){
                     String quizName = dataSnapshot.getKey();
+                    String questionCount = String.valueOf(dataSnapshot.getChildrenCount());
                     count = count +1;
                     b1 = new Button(QuizzesTutor.this);
                     b1.setId(count);
@@ -47,8 +49,10 @@ public class QuizzesTutor extends AppCompatActivity {
                     b1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            Toast.makeText(QuizzesTutor.this, questionCount, Toast.LENGTH_SHORT).show();
                             Intent intent =  new Intent(QuizzesTutor.this,DisplayQuizDif.class);
                             intent.putExtra("quizName",quizName);
+                            intent.putExtra("questionCount",questionCount);
                             startActivity(intent);
                         }
                     });

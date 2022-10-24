@@ -31,10 +31,6 @@
         android:id="@+id/submitPP"
         android:layout_width="260dp"
         android:layout_height="69dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="646dp"
         android:backgroundTint="#FFC107"
         android:enabled="false"
         android:fontFamily="@font/autour_one"
@@ -46,10 +42,10 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <Button
         android:id="@+id/addQuiz"

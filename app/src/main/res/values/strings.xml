@@ -52,6 +52,18 @@
     <string name="edit_quiz">Edit Quiz</string>
     <string name="cancel">Cancel</string>
     <string name="add_new_quiz">Add New Quiz</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="sports">Sports</string>
+    <string name="history">History</string>
+    <string name="mathematics">Mathematics</string>
+    <string name="phy">Physics</string>
+    <string name="geo">Geography</string>
+    <string name="cs">Choose A Subject</string>
+    <string name="createForum">Post In Forum</string>
+    <string name="check">Forums Discussions</string>
+    <string name="opt">Choose Option</string>
+    <string name="post">Post</string>
     <string name="AddPastPapers">Add Past Papers</string>
     <string-array name="year">
         <item>2022</item>
@@ -67,5 +79,6 @@
     <string name="Grade">Grade</string>
     <string name="UploadPP">Upload Past Paper</string>
     <string name="UploadPPtext">Upload</string>
+
 
 </resources>

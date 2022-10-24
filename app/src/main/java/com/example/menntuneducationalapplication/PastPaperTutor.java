@@ -19,8 +19,8 @@ public class PastPaperTutor extends AppCompatActivity {
         addNewPP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PastPaperTutor.this, AddPastPapers.class);
-                startActivity(intent);
+//                Intent intent = new Intent(PastPaperTutor.this, AddPastPapers.class);
+//                startActivity(intent);
             }
 
         });

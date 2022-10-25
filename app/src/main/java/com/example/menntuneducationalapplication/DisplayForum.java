@@ -37,13 +37,14 @@ public class DisplayForum extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot: snapshot.child("Forums").getChildren()){
                     String subjectFilter = String.valueOf(dataSnapshot.child("subject").getValue());
                     String forumQ = dataSnapshot.getKey();
+                    String question = String.valueOf(dataSnapshot.child("question").getValue());
 
                     //Toast.makeText(DisplayForum.this, subjectFilter, Toast.LENGTH_SHORT).show();
 
                     if(subjectFilter.equals(sub)) {
 
                         bt = new Button(DisplayForum.this);
-                        bt.setText(forumQ);
+                        bt.setText(question);
                         bt.setBackgroundResource(R.color.buttonOrange);
                         bt.setTextSize(20);
                         parent.addView(bt);

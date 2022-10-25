@@ -53,6 +53,7 @@ public class AllReplies extends AppCompatActivity {
                         public void onClick(View view) {
                             Intent X=new Intent(AllReplies.this,ReplyOptions.class);
                             X.putExtra("replies",replies);
+                            X.putExtra("ForumName",ForumName);
                             startActivity(X);
                         }
                     });

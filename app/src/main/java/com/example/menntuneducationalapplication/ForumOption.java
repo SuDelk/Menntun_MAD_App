@@ -1,5 +1,6 @@
 package com.example.menntuneducationalapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,21 +8,26 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ForumOption extends AppCompatActivity {
 
     String ForumName;
     Button BtV,BtU,BtD,BtR;
-    TextView tv;
+    EditText tv;
 
     DatabaseReference dbRef;
+    Forum f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +41,10 @@ public class ForumOption extends AppCompatActivity {
         BtD = findViewById(R.id.Del);
         tv = findViewById(R.id.forumQues);
         tv.setText(ForumName);
-        dbRef= FirebaseDatabase.getInstance().getReference().child("Forums");
 
+        dbRef= FirebaseDatabase.getInstance().getReference().child("Forums");
+        String sub=String.valueOf(dbRef.child(ForumName).child("subject"));
+        f= new Forum(ForumName,sub);
         BtD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,8 +63,32 @@ public class ForumOption extends AppCompatActivity {
                 seeAllReplies();
             }
         });
+        BtU.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.hasChild(ForumName)){
+                            f.setQuestion(tv.getText().toString().trim());
+                            f.setSubject(sub);
+
+                            dbRef.setValue(f);
+                            Toast.makeText(ForumOption.this, "Updated", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+        });
 
     }
+
+
 
     public void seeAllReplies(){
         Intent X = new Intent(ForumOption.this,AllReplies.class);

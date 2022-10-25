@@ -12,6 +12,13 @@ public class Forum {
 
     }
 
+    public void setQuestion(String question) {
+        Question = question;
+    }
+
+    public void setSubject(String subject) {
+        Subject = subject;
+    }
 
     public String getQuestion() {
         return Question;

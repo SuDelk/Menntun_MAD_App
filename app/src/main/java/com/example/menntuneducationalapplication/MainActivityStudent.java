@@ -36,7 +36,7 @@ public class MainActivityStudent extends AppCompatActivity {
     }
 
     public void toForum(View view){
-        Intent X=new Intent(this, CreateForums.class);
+        Intent X=new Intent(this, SubjectSelectorForForums.class);
         startActivity(X);
     }
     public void toQuiz(View view){

@@ -2,8 +2,10 @@ package com.example.menntuneducationalapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 public class DisplayForum extends AppCompatActivity {
 
     Button bt;
+    TextView ss;
     LinearLayout parent;
     String sub;
 
@@ -37,16 +40,25 @@ public class DisplayForum extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot: snapshot.child("Forums").getChildren()){
                     String subjectFilter = String.valueOf(dataSnapshot.child("subject").getValue());
                     String forumQ = dataSnapshot.getKey();
+                    String question = String.valueOf(dataSnapshot.child("question").getValue());
 
                     //Toast.makeText(DisplayForum.this, subjectFilter, Toast.LENGTH_SHORT).show();
 
                     if(subjectFilter.equals(sub)) {
 
                         bt = new Button(DisplayForum.this);
-                        bt.setText(forumQ);
+                        bt.setText(question);
                         bt.setBackgroundResource(R.color.buttonOrange);
                         bt.setTextSize(20);
+                        Typeface typeface = ResourcesCompat.getFont(DisplayForum.this,R.font.carter_one);
+                        bt.setTypeface(typeface);
                         parent.addView(bt);
+
+                        ss = new TextView(DisplayForum.this);
+                        ss.setText("");
+                        ss.setHeight(5);
+                        ss.setBackgroundResource(R.drawable.dynspac);
+                        parent.addView(ss);
 
                         bt.setOnClickListener(new View.OnClickListener() {
                             @Override

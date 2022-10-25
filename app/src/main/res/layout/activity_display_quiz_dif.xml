@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg4"
     tools:context=".DisplayQuizDif">
 
 
@@ -20,13 +20,13 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0E0D0D"
         android:textSize="34sp"
-        app:cornerRadius="@dimen/padQ"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintVertical_bias="0.095" />
 
     <Button
         android:id="@+id/viewQuiz"
@@ -43,9 +43,10 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headingBtn"
-        app:layout_constraintVertical_bias="0.17" />
+        app:layout_constraintVertical_bias="0.202" />
 
     <Button
         android:id="@+id/editQuiz"
@@ -62,10 +63,9 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headingBtn"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintVertical_bias="0.305" />
 
     <Button
         android:id="@+id/deleteQuiz"
@@ -82,10 +82,10 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headingBtn"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.411" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

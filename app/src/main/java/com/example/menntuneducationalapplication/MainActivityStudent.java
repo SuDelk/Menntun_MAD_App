@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivityStudent extends AppCompatActivity {
 
-    TextView name;
+    TextView name,grade,un;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,12 @@ public class MainActivityStudent extends AppCompatActivity {
         setContentView(R.layout.activity_main_student);
 
         name = findViewById(R.id.nameOfStd);
+        grade = findViewById(R.id.gradeOfStd);
+        un =findViewById(R.id.userOfStd);
+
         name.setText(GlobalStudent._NAME);
+        grade.setText(GlobalStudent._GRADE);
+        un.setText("Username: "+GlobalStudent._USER);
     }
 
     public void toForum(View view){

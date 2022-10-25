@@ -27,7 +27,7 @@ public class ForumOption extends AppCompatActivity {
     EditText tv;
 
     DatabaseReference dbRef;
-    Forum f;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class ForumOption extends AppCompatActivity {
 
         dbRef= FirebaseDatabase.getInstance().getReference().child("Forums");
         String sub=String.valueOf(dbRef.child(ForumName).child("subject"));
-        f= new Forum(ForumName,sub);
+
         BtD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,27 +66,19 @@ public class ForumOption extends AppCompatActivity {
         BtU.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if(snapshot.hasChild(ForumName)){
-                            f.setQuestion(tv.getText().toString().trim());
-                            f.setSubject(sub);
-
-                            dbRef.setValue(f);
-                            Toast.makeText(ForumOption.this, "Updated", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
+                updateForum();
+                Toast.makeText(ForumOption.this, "Forum Updated", Toast.LENGTH_SHORT).show();
             }
         });
 
     }
+
+    public void updateForum(){
+        String TV=tv.getText().toString();
+        dbRef.child(ForumName).child("question").setValue(TV);
+
+    }
+
 
 
 

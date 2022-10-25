@@ -98,6 +98,7 @@
     <string name="gradePPSpinner">gradePP</string>
     <string name="gradePPspinner">gradePPspinner</string>
     <string name="SubjectPP">Subject</string>
+    <string name="repp">Replies</string>
 
 
 </resources>

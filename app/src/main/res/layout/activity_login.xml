@@ -96,7 +96,7 @@
 
     <Button
         android:id="@+id/tutorLog"
-        android:layout_width="164dp"
+        android:layout_width="wrap_content"
         android:layout_height="49dp"
         android:layout_gravity="start"
         android:layout_marginBottom="64dp"

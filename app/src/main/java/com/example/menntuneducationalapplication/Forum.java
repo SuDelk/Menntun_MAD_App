@@ -3,19 +3,21 @@ package com.example.menntuneducationalapplication;
 public class Forum {
     String Question;
     String Subject;
-    String [] Answers;
-    int noOfReplies;
 
 
     public Forum(String question,String subject) {
         Question = question;
         Subject = subject;
-        Answers = new String[10];
-        noOfReplies=0;
+
 
     }
-    public void setAnswers(String X){
-        Answers[noOfReplies++]=X;
+
+    public void setQuestion(String question) {
+        Question = question;
+    }
+
+    public void setSubject(String subject) {
+        Subject = subject;
     }
 
     public String getQuestion() {
@@ -26,7 +28,4 @@ public class Forum {
         return Subject;
     }
 
-    public String[] getAnswers() {
-        return Answers;
-    }
 }

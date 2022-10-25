@@ -4,8 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgnew"
-    tools:context=".RegStudent">
+    tools:context=".TutorProfile"
+    android:background="@drawable/stdbg">
+
+    <Button
+        android:id="@+id/head"
+        android:layout_width="260dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="646dp"
+        android:backgroundTint="#FFC107"
+        android:enabled="false"
+        android:fontFamily="@font/atomic_age"
+        android:includeFontPadding="false"
+        android:text="@string/fullName"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#0E0D0D"
+        android:textSize="34sp"
+        app:cornerRadius="@dimen/padQ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/spinnerGrade"
@@ -15,32 +40,67 @@
         android:entries="@array/spinnerItems"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.525" />
+        app:layout_constraintVertical_bias="0.51" />
 
     <Button
-        android:id="@+id/regStudFinal"
-        android:layout_width="267dp"
-        android:layout_height="75dp"
+        android:id="@+id/updateTut"
+        android:layout_width="98dp"
+        android:layout_height="53dp"
         android:layout_gravity="start"
         android:backgroundTint="#FF9800"
         android:enabled="true"
-        android:text="@string/regStd"
+        android:text="Update"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.841" />
+        app:layout_constraintVertical_bias="0.87" />
+
+    <Button
+        android:id="@+id/backTut"
+        android:layout_width="98dp"
+        android:layout_height="53dp"
+        android:layout_gravity="start"
+        android:backgroundTint="#CDDC39"
+        android:enabled="true"
+        android:text="@string/back"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87" />
+
+    <Button
+        android:id="@+id/deleteTut"
+        android:layout_width="98dp"
+        android:layout_height="53dp"
+        android:layout_gravity="start"
+        android:backgroundTint="#FF0000"
+        android:enabled="true"
+        android:text="@string/delete"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87" />
 
     <EditText
-        android:id="@+id/studUN"
+        android:id="@+id/tutUN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="104dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/usname"
@@ -53,7 +113,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/studPWD"
+        android:id="@+id/tutPWD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -67,10 +127,10 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614" />
+        app:layout_constraintVertical_bias="0.582" />
 
     <EditText
-        android:id="@+id/studPWD2"
+        android:id="@+id/tutPWD2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -84,10 +144,10 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705" />
+        app:layout_constraintVertical_bias="0.653" />
 
     <EditText
-        android:id="@+id/studPhone"
+        android:id="@+id/tutPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -101,10 +161,10 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442" />
+        app:layout_constraintVertical_bias="0.437" />
 
     <EditText
-        android:id="@+id/studBday"
+        android:id="@+id/tutBday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -118,10 +178,10 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.354" />
+        app:layout_constraintVertical_bias="0.367" />
 
     <EditText
-        android:id="@+id/studEmailAddress"
+        android:id="@+id/tutEmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -135,10 +195,10 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.267" />
+        app:layout_constraintVertical_bias="0.297" />
 
     <EditText
-        android:id="@+id/studName"
+        android:id="@+id/tutName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -152,5 +212,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintVertical_bias="0.226" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

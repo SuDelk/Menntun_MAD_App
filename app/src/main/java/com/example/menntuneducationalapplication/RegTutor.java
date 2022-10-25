@@ -64,24 +64,24 @@ public class RegTutor extends AppCompatActivity {
                     Toast.makeText(RegTutor.this, "Username is already in use!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    if(un.length()==0|| pwd.length()==0||email.length()==0||bday.length()==0||phone.length()==0||name.length()==0||pwd2.length()==0){
+                    if(un.length()==0|| pwd.length()==0||email.length()==0||bday.length()!=10||phone.length()<9||phone.length()>12||name.length()==0||pwd2.length()==0){
                         if(un.length()==0){
                             tutUn.setError("Enter a new Username");
                         }
-                        else if( pwd.length()==0){
-                            tutPwd.setError("Enter a password");
+                        else if( name.length()==0){
+                            tutName.setError("Enter Full Name");
                         }
                         else if( email.length()==0){
                             tutEmail.setError("Enter an Email Address");
                         }
-                        else if( bday.length()==0){
-                            tutBday.setError("Enter your Birth Date");
+                        else if( bday.length()!=10){
+                            tutBday.setError("Enter your Birth Date\ndd/mm/yyyy");
                         }
-                        else if( phone.length()==0){
-                            tutPhone.setError("Enter phone number");
+                        else if(phone.length()<9||phone.length()>12){
+                            tutPhone.setError("Enter Valid phone number");
                         }
-                        else if( name.length()==0){
-                            tutName.setError("Enter Full Name");
+                        else if( pwd.length()==0){
+                            tutPwd.setError("Enter a password");
                         }
                         else if( pwd2.length()==0){
                             tutPwd2.setError("Enter confirm password");

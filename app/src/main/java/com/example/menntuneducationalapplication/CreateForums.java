@@ -31,7 +31,7 @@ public class CreateForums extends AppCompatActivity {
         btn2 = findViewById(R.id.viewForums);
         qName = edt.getText().toString();
 
-        db = FirebaseDatabase.getInstance().getReference().child("Forums").child(qName);
+        db = FirebaseDatabase.getInstance().getReferenceFromUrl("https://menntun-4ae5e-default-rtdb.firebaseio.com/").child("Forums");
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,8 +42,7 @@ public class CreateForums extends AppCompatActivity {
 
     }
 
-    public void insertIntoForumDB(){
-
+    private void insertIntoForumDB(){
         String Q=edt.getText().toString();
         Forum ff= new Forum(Q,sub);
         if(Q.isEmpty()){

@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class ForumTypeSelector extends AppCompatActivity {
 
-    TextView tv;
+    TextView tv,tvSub;
     Button bb;
     String subject;
 
@@ -23,7 +23,8 @@ public class ForumTypeSelector extends AppCompatActivity {
         subject = getIntent().getStringExtra("subject");
         bb= findViewById(R.id.button8);
         tv= findViewById(R.id.textView16);
-
+        tvSub=findViewById(R.id.textView4);
+        tvSub.setText(subject);
         tv.setText(subject);
 
         Toast.makeText(this, "Hello "+subject, Toast.LENGTH_SHORT).show();

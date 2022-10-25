@@ -99,7 +99,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.096" />
 
     <EditText
         android:id="@+id/IdTVQuestion"
@@ -146,18 +146,18 @@
 
     <LinearLayout
         android:id="@+id/linlay1"
-        android:layout_width="261dp"
-        android:layout_height="194dp"
+        android:layout_width="265dp"
+        android:layout_height="206dp"
         android:background="#80DCBCBC"
         android:backgroundTint="#298166"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintHorizontal_bias="0.691"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318">
+        app:layout_constraintVertical_bias="0.325">
 
         <EditText
             android:id="@+id/option1Txt"
@@ -256,8 +256,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="70dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#F44336"
         android:fontFamily="@font/carter_one"
         android:gravity="center"
@@ -269,13 +269,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.248"
+        app:layout_constraintVertical_bias="0.261"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="70dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#F44336"
         android:fontFamily="@font/carter_one"
         android:gravity="center"
@@ -292,8 +292,8 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="70dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#F44336"
         android:fontFamily="@font/carter_one"
         android:gravity="center"
@@ -310,8 +310,8 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="70dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#F44336"
         android:fontFamily="@font/carter_one"
         android:gravity="center"

@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/head55"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#1FECD4"
         android:enabled="false"
@@ -23,14 +23,14 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tutUN"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintTop_toBottomOf="@+id/head18"
+        app:layout_constraintVertical_bias="0.042" />
 
     <Button
         android:id="@+id/head58"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#1FECD4"
         android:enabled="false"
@@ -42,16 +42,16 @@
         android:textColor="#0E0D0D"
         android:textSize="10sp"
         app:cornerRadius="@dimen/padQ"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/head59"
         app:layout_constraintEnd_toStartOf="@+id/tutBday"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintTop_toBottomOf="@+id/head57"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/head59"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#1FECD4"
         android:enabled="false"
@@ -63,16 +63,16 @@
         android:textColor="#0E0D0D"
         android:textSize="10sp"
         app:cornerRadius="@dimen/padQ"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/head60"
         app:layout_constraintEnd_toStartOf="@+id/tutPhone"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintTop_toBottomOf="@+id/head58"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/head60"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#FF306B"
         android:enabled="false"
@@ -84,12 +84,12 @@
         android:textColor="#0E0D0D"
         android:textSize="16sp"
         app:cornerRadius="@dimen/padQ"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/head61"
         app:layout_constraintEnd_toStartOf="@+id/tutPWD"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
+        app:layout_constraintTop_toBottomOf="@+id/head59"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/head61"
@@ -110,7 +110,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708" />
+        app:layout_constraintVertical_bias="0.634" />
 
     <EditText
         android:id="@+id/tutUN"
@@ -119,14 +119,14 @@
         android:layout_marginTop="104dp"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
         android:hint="@string/usname"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:fontFamily="sans-serif-condensed"
         android:textColor="#FFFFFF"
         android:textColorHint="#D6D0D0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -136,18 +136,18 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
         android:hint="Date Of Birth"
         android:inputType="date"
         android:minHeight="48dp"
-        android:fontFamily="sans-serif-condensed"
         android:textColor="#FFFFFF"
         android:textColorHint="#D6D0D0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
+        app:layout_constraintVertical_bias="0.398" />
 
     <EditText
         android:id="@+id/tutPhone"
@@ -155,18 +155,18 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
         android:hint="Phone Number"
         android:inputType="phone"
         android:minHeight="48dp"
-        android:fontFamily="sans-serif-condensed"
         android:textColor="#FFFFFF"
         android:textColorHint="#D6D0D0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintVertical_bias="0.479" />
 
     <EditText
         android:id="@+id/tutPWD"
@@ -182,10 +182,10 @@
         android:textColorHint="#D6D0D0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626" />
+        app:layout_constraintVertical_bias="0.56" />
 
     <EditText
         android:id="@+id/tutPWD2"
@@ -193,6 +193,7 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
@@ -200,10 +201,10 @@
         android:textColorHint="#D6D0D0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.710" />
+        app:layout_constraintVertical_bias="0.641" />
 
     <EditText
         android:id="@+id/tutEmailAddress"
@@ -211,22 +212,22 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
-        android:hint="Email Address"
         android:fontFamily="sans-serif-condensed"
+        android:hint="Email Address"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#D6D0D0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
+        app:layout_constraintVertical_bias="0.317" />
 
     <Button
         android:id="@+id/head57"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#1FECD4"
         android:enabled="false"
@@ -238,16 +239,16 @@
         android:textColor="#0E0D0D"
         android:textSize="16sp"
         app:cornerRadius="@dimen/padQ"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/head58"
         app:layout_constraintEnd_toStartOf="@+id/tutEmailAddress"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintTop_toBottomOf="@+id/head56"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/head56"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#1FECD4"
         android:enabled="false"
@@ -259,12 +260,12 @@
         android:textColor="#0E0D0D"
         android:textSize="16sp"
         app:cornerRadius="@dimen/padQ"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/head57"
         app:layout_constraintEnd_toStartOf="@+id/tutName"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24" />
+        app:layout_constraintTop_toBottomOf="@+id/head55"
+        app:layout_constraintVertical_bias="0.5" />
 
     <EditText
         android:id="@+id/tutName"
@@ -272,27 +273,23 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/fullName"
         android:fontFamily="sans-serif-condensed"
+        android:hint="@string/fullName"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#D6D0D0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.243" />
+        app:layout_constraintVertical_bias="0.236" />
 
     <Button
         android:id="@+id/head18"
         android:layout_width="260dp"
         android:layout_height="69dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="646dp"
         android:backgroundTint="#FFC107"
         android:enabled="false"
         android:fontFamily="@font/atomic_age"
@@ -305,10 +302,10 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <Button
         android:id="@+id/regTutFinal"

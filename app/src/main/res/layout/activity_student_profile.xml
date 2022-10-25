@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentProfile"
-    android:background="@drawable/stdbg">
+    android:background="@drawable/stdbg"
+    tools:context=".StudentProfile">
 
     <Button
         android:id="@+id/head4"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#1FECD4"
         android:enabled="false"
@@ -23,14 +23,14 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/studUN"
-        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.145" />
+        app:layout_constraintVertical_bias="0.149" />
 
     <Button
         android:id="@+id/head7"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#1FECD4"
         android:enabled="false"
@@ -42,16 +42,16 @@
         android:textColor="#0E0D0D"
         android:textSize="16sp"
         app:cornerRadius="@dimen/padQ"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/head8"
         app:layout_constraintEnd_toStartOf="@+id/studEmailAddress"
-        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
+        app:layout_constraintTop_toBottomOf="@+id/head5"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/head8"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#1FECD4"
         android:enabled="false"
@@ -63,16 +63,16 @@
         android:textColor="#0E0D0D"
         android:textSize="10sp"
         app:cornerRadius="@dimen/padQ"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/head15"
         app:layout_constraintEnd_toStartOf="@+id/studBday"
-        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintTop_toBottomOf="@+id/head7"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/head15"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#1FECD4"
         android:enabled="false"
@@ -86,14 +86,14 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/studPhone"
-        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.493" />
+        app:layout_constraintVertical_bias="0.454" />
 
     <Button
         android:id="@+id/head5"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#1FECD4"
         android:enabled="false"
@@ -105,12 +105,12 @@
         android:textColor="#0E0D0D"
         android:textSize="16sp"
         app:cornerRadius="@dimen/padQ"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/studName"
-        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintBottom_toTopOf="@+id/head7"
+        app:layout_constraintEnd_toStartOf="@+id/studEmailAddress"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235" />
+        app:layout_constraintTop_toBottomOf="@+id/head4"
+        app:layout_constraintVertical_bias="0.5" />
 
     <EditText
         android:id="@+id/studPWD"
@@ -133,7 +133,7 @@
 
     <Button
         android:id="@+id/head16"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#FF306B"
         android:enabled="false"
@@ -147,14 +147,14 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/studPWD"
-        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.678" />
 
     <Button
         android:id="@+id/head17"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:backgroundTint="#FF306B"
         android:enabled="false"
@@ -168,7 +168,7 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/studPWD2"
-        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.767" />
@@ -196,10 +196,6 @@
         android:id="@+id/head"
         android:layout_width="260dp"
         android:layout_height="69dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="646dp"
         android:backgroundTint="#FFC107"
         android:enabled="false"
         android:fontFamily="@font/atomic_age"
@@ -225,14 +221,13 @@
         android:entries="@array/spinnerItems"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.585" />
+        app:layout_constraintVertical_bias="0.582" />
 
     <Button
         android:id="@+id/updateStd"
-        android:layout_width="98dp"
+        android:layout_width="wrap_content"
         android:layout_height="53dp"
         android:layout_gravity="start"
         android:backgroundTint="#FF9800"
@@ -249,7 +244,7 @@
 
     <Button
         android:id="@+id/deleteStd"
-        android:layout_width="98dp"
+        android:layout_width="wrap_content"
         android:layout_height="53dp"
         android:layout_gravity="start"
         android:backgroundTint="#FF0000"
@@ -266,7 +261,7 @@
 
     <Button
         android:id="@+id/backStd"
-        android:layout_width="98dp"
+        android:layout_width="wrap_content"
         android:layout_height="53dp"
         android:layout_gravity="start"
         android:backgroundTint="#CDDC39"
@@ -276,7 +271,7 @@
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.892" />
@@ -285,7 +280,6 @@
         android:id="@+id/studUN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
         android:autofillHints=""
         android:ems="10"
         android:fontFamily="sans-serif-condensed"
@@ -294,10 +288,12 @@
         android:minHeight="48dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#CDC3C3"
+        app:layout_constraintBottom_toTopOf="@+id/studName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.815"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
 
     <EditText
         android:id="@+id/studPhone"
@@ -313,10 +309,10 @@
         android:textColorHint="#CDC3C3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.493" />
+        app:layout_constraintVertical_bias="0.459" />
 
     <EditText
         android:id="@+id/studBday"
@@ -332,10 +328,10 @@
         android:textColorHint="#CDC3C3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.404" />
+        app:layout_constraintVertical_bias="0.378" />
 
     <EditText
         android:id="@+id/studEmailAddress"
@@ -351,10 +347,10 @@
         android:textColorHint="#CDC3C3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.297" />
 
     <EditText
         android:id="@+id/studName"
@@ -370,9 +366,9 @@
         android:textColorHint="#CDC3C3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.234" />
+        app:layout_constraintVertical_bias="0.216" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

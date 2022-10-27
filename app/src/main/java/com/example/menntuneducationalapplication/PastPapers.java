@@ -86,7 +86,8 @@ public class PastPapers extends AppCompatActivity {
 
                        View view = super.getView(position,convertView,parent);
                        TextView text =(TextView) view.findViewById(android.R.id.text1);
-                       text.setTextColor(Color.BLACK);
+                       text.setTextColor(Color.WHITE);
+
                        text.setTextSize(22);
                        return view;
 

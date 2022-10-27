@@ -34,6 +34,9 @@ public class AddPastPapers extends AppCompatActivity {
 
     Button upload_btn;
     EditText Subject;
+    Spinner yearS;
+    Spinner gradeS;
+
 
 
     StorageReference storageReference;
@@ -46,6 +49,8 @@ public class AddPastPapers extends AppCompatActivity {
 
         upload_btn = findViewById(R.id.UploadPPbtn);
         Subject = findViewById(R.id.subjectPP);
+        yearS = findViewById(R.id.yearSpinner);
+        gradeS = findViewById(R.id.gradepp);
 
         //database
         storageReference = FirebaseStorage.getInstance().getReference();
@@ -95,8 +100,8 @@ public class AddPastPapers extends AppCompatActivity {
                         while (!uriTask.isComplete()) ;
                         Uri url = uriTask.getResult();
 
-                        uploadPDF uploadPDF = new uploadPDF(Subject.getText().toString(), url.toString());//"","","");
-                        databaseReference.child(databaseReference.push().getKey()).setValue(uploadPDF);
+                        uploadPDF uploadPDF = new uploadPDF( url.toString(),Subject.getText().toString(),yearS.getSelectedItem().toString(),gradeS.getSelectedItem().toString());
+                        databaseReference.child(Subject.getText().toString()+gradeS.getSelectedItem().toString()+yearS.getSelectedItem().toString()).setValue(uploadPDF);
 
                         Toast.makeText(AddPastPapers.this, "File Upload", Toast.LENGTH_SHORT).show();
 

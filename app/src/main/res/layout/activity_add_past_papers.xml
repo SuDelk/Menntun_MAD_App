@@ -41,23 +41,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tv_name"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
 
-    <EditText
-        android:id="@+id/subjectPP"
-        android:layout_width="329dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="4dp"
-        android:background="#5488C68A"
-        android:ems="10"
-        android:hint="@string/Subject"
-        android:textColor="#120606"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SubjectTextPP" />
 
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="26dp"
+        tools:ignore="MissingConstraints">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/Year"
         android:layout_width="83dp"
@@ -117,35 +116,20 @@
         app:layout_constraintTop_toBottomOf="@+id/Year"
         app:layout_constraintVertical_bias="0.044" />
 
-    <Button
-        android:id="@+id/submitPP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#0B430C"
-
-        android:text="@string/UploadPP"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
-
-
 
     <Button
         android:id="@+id/UploadPPbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#BC1F8878"
-        android:text="@string/UploadPP"
+        android:backgroundTint="#0B430C"
         android:radius="22pt"
+        android:text="@string/UploadPP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.671"
         app:layout_constraintStart_toEndOf="@+id/UploadPPtext"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintTop_toBottomOf="@+id/subjectPP"
+        app:layout_constraintVertical_bias="0.789" />
 
     <Spinner
         android:id="@+id/gradepp"
@@ -160,13 +144,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/gradePP"
         app:layout_constraintTop_toBottomOf="@+id/gradePP"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
+    <TextView
         android:id="@+id/UploadPPtext"
         android:layout_width="93dp"
         android:layout_height="54dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="56dp"
         android:background="#9FBF89"
         android:backgroundTint="#64AC5E"
         android:ems="10"
@@ -175,9 +159,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.789" />
+        app:layout_constraintVertical_bias="0.865" />
 
-
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/subjectPP"
+        android:layout_width="329dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="4dp"
+        android:background="#5488C68A"
+        android:ems="10"
+        android:hint="@string/Subject"
+        android:textColor="#120606"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SubjectTextPP" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

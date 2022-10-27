@@ -42,4 +42,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:padding="7dp"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@
     tools:context=".PastPapers">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView8"
         android:layout_width="414dp"
         android:layout_height="37dp"
         android:layout_marginTop="32dp"
@@ -23,30 +23,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/PastPapersTitile"
-        android:layout_width="127dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="197dp"
-        android:background="#B9D5B7"
-        android:text="@string/past_papers"
-        android:textAlignment="center"
-        android:textColor="#020202"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
+
+
+    <Button
+        android:id="@+id/submitPP"
+        android:layout_width="233dp"
+        android:layout_height="73dp"
+        android:backgroundTint="#E66C93"
+        android:enabled="false"
+        android:fontFamily="@font/autour_one"
+        android:includeFontPadding="false"
+        android:text="@string/past_papers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#0E0D0D"
+        android:textSize="24sp"
+        app:cornerRadius="@dimen/padQ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.124" />
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/listView"
-        android:padding="7dp"/>
+        android:layout_width="275dp"
+        android:layout_height="542dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="152dp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ListView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

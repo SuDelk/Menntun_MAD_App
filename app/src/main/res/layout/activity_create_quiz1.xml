@@ -10,12 +10,8 @@
 
     <Button
         android:id="@+id/head"
-        android:layout_width="260dp"
+        android:layout_width="wrap_content"
         android:layout_height="69dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="646dp"
         android:backgroundTint="#FFC107"
         android:enabled="false"
         android:fontFamily="@font/atomic_age"
@@ -28,23 +24,22 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="387dp"
-        android:layout_height="282dp"
+        android:layout_width="405dp"
+        android:layout_height="350dp"
         android:background="#77DC1E1E"
         android:backgroundTint="#AE0337F4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265">
+        app:layout_constraintVertical_bias="0.223">
 
     </FrameLayout>
 
@@ -62,10 +57,10 @@
         android:textColorHint="#B90E0D0D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22" />
+        app:layout_constraintVertical_bias="0.177" />
 
     <EditText
         android:id="@+id/noOfQues"
@@ -81,46 +76,49 @@
         android:textColorHint="#B90E0D0D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quizName1"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32" />
 
     <Button
         android:id="@+id/createQuizBtn"
-        android:layout_width="171dp"
-        android:layout_height="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/autour_one"
         android:outlineAmbientShadowColor="@color/cardview_dark_background"
         android:text="@string/createQuiz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/noOfQues"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468" />
 
     <Button
         android:id="@+id/nouse"
-        android:layout_width="124dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="#FF5722"
         android:enabled="false"
         android:fontFamily="sans-serif-condensed-medium"
         android:outlineAmbientShadowColor="@color/cardview_dark_background"
         android:text="@string/quizN"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintBottom_toTopOf="@+id/nouse1"
+        app:layout_constraintEnd_toStartOf="@+id/quizName1"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
+        app:layout_constraintVertical_bias="0.86" />
 
     <Button
         android:id="@+id/nouse1"
-        android:layout_width="123dp"
-        android:layout_height="70dp"
+        android:layout_width="130dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#FF5722"
         android:enabled="false"
         android:fontFamily="sans-serif-condensed-medium"
@@ -128,10 +126,10 @@
         android:text="@string/number_of_questions"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintEnd_toStartOf="@+id/noOfQues"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
+        app:layout_constraintVertical_bias="0.307" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

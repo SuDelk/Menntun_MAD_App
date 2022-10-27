@@ -49,8 +49,8 @@
 
     <Button
         android:id="@+id/addQuiz"
-        android:layout_width="195dp"
-        android:layout_height="69dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="#0C1D77"
         android:fontFamily="@font/aclonica"
         android:text="@string/add_new_quiz"

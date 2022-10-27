@@ -99,6 +99,10 @@
     <string name="gradePPspinner">gradePPspinner</string>
     <string name="SubjectPP">Subject</string>
     <string name="repp">Replies</string>
+    <string name="sf">See Forums</string>
+    <string name="qq">Question</string>
+    <string name="edq">Edit Question</string>
+    <string name="deq">Delete Question</string>
 
 
 </resources>

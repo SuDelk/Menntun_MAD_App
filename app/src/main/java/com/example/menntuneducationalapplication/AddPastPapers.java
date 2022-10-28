@@ -76,8 +76,21 @@ public class AddPastPapers extends AppCompatActivity {
         upload_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(Subject.getText().toString().length()==0|| gradeS.getSelectedItem().toString().equals("Select Grade") || Subject.getText().toString().equals("Select Year")){
+                    if (Subject.getText().toString().length()==0){
+                        Subject.setError("Enter Subject Name");
+                    }
+                    else if (gradeS.getSelectedItem().toString().equals("Select Grade")){
+                        Toast.makeText(AddPastPapers.this, "Select Grade", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(AddPastPapers.this, "Select Year", Toast.LENGTH_SHORT).show();
+                    }
+                }else {
 
-                selectFiles();
+                    selectFiles();
+                }
+
 
             }
         });
@@ -112,12 +125,11 @@ public class AddPastPapers extends AppCompatActivity {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
-
                         Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
                         while (!uriTask.isComplete()) ;
                         Uri url = uriTask.getResult();
 
-                        uploadPDF uploadPDF = new uploadPDF( url.toString(),Subject.getText().toString(),yearS.getSelectedItem().toString(),gradeS.getSelectedItem().toString());
+                        uploadPDF uploadPDF = new uploadPDF( url.toString(),Subject.getText().toString(),Subject.getText().toString(),gradeS.getSelectedItem().toString());
                         databaseReference.child(String.valueOf(maxId+1)).setValue(uploadPDF);
 
                         Toast.makeText(AddPastPapers.this, "File Upload", Toast.LENGTH_SHORT).show();
@@ -134,4 +146,7 @@ public class AddPastPapers extends AppCompatActivity {
 
                     }
                 });
+
+
+
     }}

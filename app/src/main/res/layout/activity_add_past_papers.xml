@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:circularflow_radiusInDP="2"
-    android:background="@drawable/bgparw"
+    android:background="@drawable/bg6"
     tools:context=".PastPapers">
 
     <Button
         android:id="@+id/submitPP"
-        android:layout_width="367dp"
-        android:layout_height="67dp"
-        android:backgroundTint="#D3607B"
+        android:layout_width="412dp"
+        android:layout_height="75dp"
+        android:backgroundTint="#EC6F8D"
         android:enabled="false"
         android:fontFamily="@font/autour_one"
         android:includeFontPadding="false"
@@ -23,9 +23,10 @@
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tv_name"
@@ -48,8 +49,8 @@
         android:id="@+id/Year"
         android:layout_width="230dp"
         android:layout_height="53dp"
-        android:layout_marginTop="308dp"
-        android:background="#AB418DFF"
+        android:layout_marginTop="336dp"
+        android:background="#BC418DFF"
         android:fontFamily="@font/aclonica"
         android:gravity="center"
         android:text="@string/Year"
@@ -81,7 +82,7 @@
         android:id="@+id/gradePP"
         android:layout_width="216dp"
         android:layout_height="49dp"
-        android:layout_marginTop="452dp"
+        android:layout_marginTop="488dp"
         android:background="#B0418DFF"
         android:fontFamily="@font/aclonica"
         android:gravity="center"
@@ -89,7 +90,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,15 +115,16 @@
         android:id="@+id/UploadPPbtn"
         android:layout_width="244dp"
         android:layout_height="62dp"
-        android:backgroundTint="#C1101432"
+        android:backgroundTint="#6A2813"
         android:radius="50dp"
         android:text="@string/UploadPP"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subjectPP"
-        app:layout_constraintVertical_bias="0.853" />
+        app:layout_constraintVertical_bias="0.956" />
 
     <Spinner
         android:id="@+id/gradepp"

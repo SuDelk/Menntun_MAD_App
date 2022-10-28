@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@drawable/bg"
-    app:circularflow_radiusInDP="2"
-    tools:context=".PastPapers">
+    tools:context=".EditPastPaper">
 
     <TextView
         android:id="@+id/textView6"
@@ -27,16 +25,16 @@
 
     <Button
         android:id="@+id/submitPP"
-        android:layout_width="340dp"
+        android:layout_width="wrap_content"
         android:layout_height="74dp"
         android:backgroundTint="#D3607B"
         android:enabled="false"
         android:fontFamily="@font/autour_one"
         android:includeFontPadding="false"
-        android:text="@string/TutorPastPaper"
+        android:text="Edit Past Paper"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0E0D0D"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:cornerRadius="@dimen/padQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,34 +44,51 @@
         app:layout_constraintVertical_bias="0.121" />
 
 
-
-
-
     <Button
-        android:id="@+id/addpp"
-        android:layout_width="250dp"
-        android:layout_height="71dp"
-        android:backgroundTint="#2C2B5E"
-        android:text="@string/AddPastPapers"
+        android:id="@+id/UpdatePP"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#418DFF"
+        android:text="@string/Update"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+        app:layout_constraintVertical_bias="0.55" />
 
-    <LinearLayout
-        android:id="@+id/line"
-        android:layout_width="380dp"
-        android:layout_height="342dp"
-        android:layout_marginBottom="192dp"
-        android:orientation="vertical"
+    <Button
+        android:id="@+id/DeletePP"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#418DFF"
+        android:text="@string/Delete"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submitPP"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685" />
 
-
+    <Button
+        android:id="@+id/viewpp"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#418DFF"
+        android:text="@string/past_papers"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.412" />
 </androidx.constraintlayout.widget.ConstraintLayout>

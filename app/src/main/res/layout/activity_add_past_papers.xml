@@ -16,6 +16,7 @@
         android:layout_marginEnd="3dp"
         android:background="#673AB7"
         android:text="@string/men"
+
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -23,23 +24,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/TutorPastPapersTitile"
-        android:layout_width="182dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="197dp"
-        android:background="#B9D5B7"
+    <Button
+        android:id="@+id/submitPP"
+        android:layout_width="367dp"
+        android:layout_height="67dp"
+        android:backgroundTint="#D3607B"
+        android:enabled="false"
+        android:fontFamily="@font/autour_one"
+        android:includeFontPadding="false"
         android:text="@string/AddPastPapers"
-        android:textAlignment="center"
-        android:textColor="#020202"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#0E0D0D"
+        android:textSize="24sp"
+        app:cornerRadius="@dimen/padQ"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tv_name"
@@ -57,45 +60,53 @@
 
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/Year"
-        android:layout_width="83dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="272dp"
-        android:background="#8AE48D"
+        android:layout_width="230dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="308dp"
+        android:background="#AB418DFF"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
         android:text="@string/Year"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/SubjectTextPP"
-        android:layout_width="83dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="160dp"
-        android:background="#8AE48D"
+        android:layout_width="230dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="184dp"
+        android:background="#BC418DFF"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
         android:text="@string/SubjectPP"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/gradePP"
-        android:layout_width="83dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="412dp"
-        android:background="#8AE48D"
+        android:layout_width="216dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="452dp"
+        android:background="#B0418DFF"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
         android:text="@string/gradttext"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,71 +122,53 @@
         android:foregroundTint="#130E0E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/Year"
-        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="@+id/Year"
         app:layout_constraintTop_toBottomOf="@+id/Year"
-        app:layout_constraintVertical_bias="0.044" />
-
+        app:layout_constraintVertical_bias="0.037" />
 
     <Button
         android:id="@+id/UploadPPbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#0B430C"
-        android:radius="22pt"
+        android:layout_width="244dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#C1101432"
+        android:radius="50dp"
         android:text="@string/UploadPP"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
-        app:layout_constraintStart_toEndOf="@+id/UploadPPtext"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subjectPP"
-        app:layout_constraintVertical_bias="0.789" />
+        app:layout_constraintVertical_bias="0.853" />
 
     <Spinner
         android:id="@+id/gradepp"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="224dp"
+        android:layout_width="356dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
         android:background="@android:drawable/btn_dropdown"
         android:contentDescription="@string/gradePPspinner"
         android:entries="@array/grade"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/gradePP"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="@+id/gradePP"
-        app:layout_constraintTop_toBottomOf="@+id/gradePP"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/UploadPPtext"
-        android:layout_width="93dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="56dp"
-        android:background="#9FBF89"
-        android:backgroundTint="#64AC5E"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/UploadPPtext"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintTop_toBottomOf="@+id/gradePP" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/subjectPP"
         android:layout_width="329dp"
         android:layout_height="54dp"
-        android:layout_marginTop="4dp"
-        android:background="#5488C68A"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/teal_200"
         android:ems="10"
-        android:hint="@string/Subject"
         android:textColor="#120606"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SubjectTextPP" />
+        app:layout_constraintTop_toBottomOf="@+id/SubjectTextPP"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

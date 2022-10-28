@@ -18,42 +18,95 @@
         android:background="#673AB7"
         android:text="@string/men"
         android:textAlignment="center"
+
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/TutorPastPapersTitile"
-        android:layout_width="243dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="197dp"
-        android:background="#B9D5B7"
-        android:text="@string/past_papers"
-        android:textAlignment="center"
-        android:textColor="#020202"
-        android:textSize="20sp"
-        android:textStyle="bold"
+    <Button
+        android:id="@+id/submitPP"
+        android:layout_width="340dp"
+        android:layout_height="74dp"
+        android:backgroundTint="#D3607B"
+        android:enabled="false"
+        android:fontFamily="@font/autour_one"
+        android:includeFontPadding="false"
+        android:text="@string/TutorPastPaper"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#0E0D0D"
+        android:textSize="24sp"
+        app:cornerRadius="@dimen/padQ"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121" />
 
     <Button
         android:id="@+id/addpp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="71dp"
+        android:backgroundTint="#2C2B5E"
         android:text="@string/AddPastPapers"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <TextView
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="385dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="8dp"
+        android:background="#4DC1ECA2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939" />
+        tools:ignore="MissingConstraints" />
 
+    <LinearLayout
+        android:layout_width="382dp"
+        android:layout_height="56dp"
+
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#418DFF"
+            android:text="@string/Update"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#418DFF"
+            android:text="@string/Delete"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

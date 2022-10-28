@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             };
 
             Handler handler = new Handler(Looper.getMainLooper());
-            handler.postDelayed(runnable,3000);
+            handler.postDelayed(runnable,2000);
 
         }
         else{
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                         };
 
                         Handler handler = new Handler(Looper.getMainLooper());
-                        handler.postDelayed(runnable,3000);
+                        handler.postDelayed(runnable,2000);
                     }
                 });
                 home.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +110,22 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
+        }
+    }
+    protected void onResume() {
+        super.onResume();
+        if(GlobalStudent._USER == null && GlobalTutor._USER == null){
+            Toast.makeText(MainActivity.this, "Log in first...", Toast.LENGTH_SHORT).show();
+            Runnable runnable = new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }
+            };
+
+            Handler handler = new Handler(Looper.getMainLooper());
+            handler.postDelayed(runnable,2000);
         }
     }
 }

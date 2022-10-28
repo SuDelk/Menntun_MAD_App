@@ -211,7 +211,7 @@ public class CreateQuiz2 extends AppCompatActivity {
         }else {
             QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
             insertQuizQuestion.child(String.valueOf(currentPos)).setValue(newQuestion);
-            Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
+            Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_SHORT).show();
             question.setText("");
             option1.setText("");
             option2.setText("");

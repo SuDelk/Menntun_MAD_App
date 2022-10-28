@@ -1,18 +1,21 @@
 package com.example.menntuneducationalapplication;
 
 public class uploadPDF {
-
-    public String url;
-    public String Subject;
+    String url;
+    String Subject;
+    String year;
+    String Grade;
 
 
     public uploadPDF() {
 
     }
 
-    public uploadPDF(String url, String subject) {
+    public uploadPDF(String url, String subject, String year, String grade) {
         this.url = url;
         Subject = subject;
+        this.year = year;
+        Grade = grade;
     }
 
     public String getUrl() {
@@ -29,5 +32,21 @@ public class uploadPDF {
 
     public void setSubject(String subject) {
         Subject = subject;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getGrade() {
+        return Grade;
+    }
+
+    public void setGrade(String grade) {
+        Grade = grade;
     }
 }

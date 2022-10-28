@@ -55,9 +55,9 @@ public class PastPaperTutor extends AppCompatActivity {
                     count = count +1;
                     b1 = new Button(PastPaperTutor.this);
                     b1.setId(count);
-                    b1.setText(Subject+" "+grade+" "+year);
+                    b1.setText(Subject+"-"+grade+"-"+year);
                     b1.setTag(count-1);
-                    b1.setBackgroundResource(R.drawable.dynamic);
+                    b1.setBackgroundResource(R.drawable.pp);
                     b1.setAllCaps(false);
                     Typeface typeface = ResourcesCompat.getFont(PastPaperTutor.this,R.font.carter_one);
                     b1.setTypeface(typeface);

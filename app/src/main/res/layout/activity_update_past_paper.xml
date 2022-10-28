@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/bg"
     android:layout_height="match_parent"
+    android:background="@drawable/bg6"
     tools:context=".UpdatePastPaper">
+
   <TextView
       android:id="@+id/textView8"
       android:layout_width="414dp"
@@ -27,7 +27,7 @@
       android:id="@+id/SubjectTextPP"
       android:layout_width="205dp"
       android:layout_height="44dp"
-      android:layout_marginTop="164dp"
+      android:layout_marginTop="208dp"
       android:background="#BC418DFF"
       android:fontFamily="@font/aclonica"
       android:gravity="center"
@@ -35,7 +35,7 @@
       android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +43,7 @@
       android:id="@+id/Year"
       android:layout_width="216dp"
       android:layout_height="43dp"
-      android:layout_marginTop="292dp"
+      android:layout_marginTop="348dp"
       android:background="#AB418DFF"
       android:fontFamily="@font/aclonica"
       android:gravity="center"
@@ -51,7 +51,7 @@
       android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,14 +59,14 @@
       android:id="@+id/grade"
       android:layout_width="216dp"
       android:layout_height="40dp"
-      android:layout_marginTop="404dp"
+      android:layout_marginTop="480dp"
       android:background="#AB418DFF"
       android:fontFamily="@font/aclonica"
       android:gravity="center"
       android:text="@string/Grade"
       android:textSize="20sp"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.394"
+      app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,15 +74,15 @@
       android:id="@+id/gradespin"
       android:layout_width="369dp"
       android:layout_height="57dp"
-      android:layout_marginStart="20dp"
+      android:layout_marginStart="16dp"
       android:ems="10"
+      android:entries="@array/spinnerItems"
       android:gravity="center"
       android:inputType="textPersonName"
-      android:entries="@array/spinnerItems"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/grade"
-      app:layout_constraintVertical_bias="0.03"
+      app:layout_constraintVertical_bias="0.094"
       tools:ignore="SpeakableTextPresentCheck" />
 
   <Spinner
@@ -91,14 +91,15 @@
       android:layout_height="50dp"
       android:layout_marginStart="16dp"
       android:ems="10"
+      android:entries="@array/years"
       android:gravity="center"
       android:inputType="textPersonName"
-      android:entries="@array/years"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/Year"
       app:layout_constraintVertical_bias="0.015"
       tools:ignore="SpeakableTextPresentCheck" />
+
 
   <Button
       android:id="@+id/updateppp"
@@ -115,11 +116,10 @@
       app:cornerRadius="@dimen/padQ"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.492"
+      app:layout_constraintHorizontal_bias="0.459"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.121" />
-
+      app:layout_constraintVertical_bias="0.132" />
 
   <EditText
       android:id="@+id/subjectname"
@@ -141,7 +141,7 @@
       android:layout_width="313dp"
       android:layout_height="70dp"
       android:layout_marginBottom="16dp"
-      android:backgroundTint="#C1101432"
+      android:backgroundTint="#6A2813"
       android:text="@string/UpdatePP"
       android:textSize="20dp"
       app:cornerRadius="20dp"

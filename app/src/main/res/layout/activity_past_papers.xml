@@ -8,26 +8,11 @@
     app:circularflow_radiusInDP="2"
     tools:context=".PastPapers">
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="414dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="3dp"
-        android:background="#673AB7"
-        android:text="@string/men"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <Button
         android:id="@+id/submitPP"
-        android:layout_width="340dp"
-        android:layout_height="74dp"
+        android:layout_width="360dp"
+        android:layout_height="89dp"
         android:backgroundTint="#D3607B"
         android:enabled="false"
         android:fontFamily="@font/autour_one"
@@ -42,8 +27,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
-
+        app:layout_constraintVertical_bias="0.059" />
 
     <ListView
         android:id="@+id/listView"

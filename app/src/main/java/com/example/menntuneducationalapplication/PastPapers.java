@@ -75,7 +75,7 @@ public class PastPapers extends AppCompatActivity {
                 }
                 String[] Uploads = new String[uploads.size()];
                 for(int i=0;i<Uploads.length;i++){
-                    Uploads[i]=(uploads.get(i).getSubject()+" "+uploads.get(i).getGrade()+" "+uploads.get(i).getYear());
+                    Uploads[i]=(uploads.get(i).getSubject()+"-"+uploads.get(i).getGrade()+"-"+uploads.get(i).getYear());
                 }
                 ArrayAdapter<String>adapter = new ArrayAdapter<String>(getApplicationContext(),
                         android.R.layout.simple_list_item_1,Uploads){

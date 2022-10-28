@@ -19,8 +19,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -36,6 +39,7 @@ public class AddPastPapers extends AppCompatActivity {
     EditText Subject;
     Spinner yearS;
     Spinner gradeS;
+    long maxId = 0;
 
 
 
@@ -56,12 +60,27 @@ public class AddPastPapers extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("PastPaper");
 
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    maxId = snapshot.getChildrenCount();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
         upload_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 selectFiles();
+
             }
         });
     }
@@ -101,7 +120,7 @@ public class AddPastPapers extends AppCompatActivity {
                         Uri url = uriTask.getResult();
 
                         uploadPDF uploadPDF = new uploadPDF( url.toString(),Subject.getText().toString(),yearS.getSelectedItem().toString(),gradeS.getSelectedItem().toString());
-                        databaseReference.child(Subject.getText().toString()+gradeS.getSelectedItem().toString()+yearS.getSelectedItem().toString()).setValue(uploadPDF);
+                        databaseReference.child(String.valueOf(maxId+1)).setValue(uploadPDF);
 
                         Toast.makeText(AddPastPapers.this, "File Upload", Toast.LENGTH_SHORT).show();
 

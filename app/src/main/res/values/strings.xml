@@ -103,6 +103,13 @@
     <string name="qq">Question</string>
     <string name="edq">Edit Question</string>
     <string name="deq">Delete Question</string>
+    <string name="Update">Update</string>
+    <string name="Delete">Delete</string>
+    <string name="UpdateP">Update Details</string>
+    <string name="uploadfile">Upload file</string>
+    <string name="Uploadedit">Pdf Url</string>
+    <string name="UpdatePP">Update</string>
+
 
 
 </resources>

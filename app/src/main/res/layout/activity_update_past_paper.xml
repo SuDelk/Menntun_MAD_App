@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+    tools:context=".UpdatePastPaper">
+  <TextView
+      android:id="@+id/textView8"
+      android:layout_width="414dp"
+      android:layout_height="37dp"
+      android:layout_marginTop="32dp"
+      android:layout_marginEnd="3dp"
+      android:background="#673AB7"
+      android:text="@string/men"
+      android:textAlignment="center"
+      android:textColor="#FFFFFF"
+      android:textSize="24sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+  <TextView
+      android:id="@+id/SubjectTextPP"
+      android:layout_width="205dp"
+      android:layout_height="44dp"
+      android:layout_marginTop="164dp"
+      android:background="#BC418DFF"
+      android:fontFamily="@font/aclonica"
+      android:gravity="center"
+      android:text="@string/SubjectPP"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/Year"
+      android:layout_width="216dp"
+      android:layout_height="43dp"
+      android:layout_marginTop="292dp"
+      android:background="#AB418DFF"
+      android:fontFamily="@font/aclonica"
+      android:gravity="center"
+      android:text="@string/Year"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/grade"
+      android:layout_width="216dp"
+      android:layout_height="40dp"
+      android:layout_marginTop="404dp"
+      android:background="#AB418DFF"
+      android:fontFamily="@font/aclonica"
+      android:gravity="center"
+      android:text="@string/Grade"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.394"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <Spinner
+      android:id="@+id/gradespin"
+      android:layout_width="369dp"
+      android:layout_height="57dp"
+      android:layout_marginStart="20dp"
+      android:ems="10"
+      android:gravity="center"
+      android:inputType="textPersonName"
+      android:entries="@array/spinnerItems"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/grade"
+      app:layout_constraintVertical_bias="0.03"
+      tools:ignore="SpeakableTextPresentCheck" />
+
+  <Spinner
+      android:id="@+id/yearspin"
+      android:layout_width="375dp"
+      android:layout_height="50dp"
+      android:layout_marginStart="16dp"
+      android:ems="10"
+      android:gravity="center"
+      android:inputType="textPersonName"
+      android:entries="@array/years"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/Year"
+      app:layout_constraintVertical_bias="0.015"
+      tools:ignore="SpeakableTextPresentCheck" />
+
+  <Button
+      android:id="@+id/updateppp"
+      android:layout_width="wrap_content"
+      android:layout_height="74dp"
+      android:backgroundTint="#D3607B"
+      android:enabled="false"
+      android:fontFamily="@font/autour_one"
+      android:includeFontPadding="false"
+      android:text="@string/Update"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      android:textColor="#0E0D0D"
+      android:textSize="20sp"
+      app:cornerRadius="@dimen/padQ"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.492"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.121" />
+
+
+  <EditText
+      android:id="@+id/subjectname"
+      android:layout_width="373dp"
+      android:layout_height="56dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="8dp"
+      android:background="@drawable/rounded"
+      android:ems="10"
+      android:gravity="center"
+
+      android:inputType="textPersonName"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/SubjectTextPP"
+      tools:ignore="SpeakableTextPresentCheck" />
+
+  <Button
+      android:id="@+id/buttonUp"
+      android:layout_width="313dp"
+      android:layout_height="70dp"
+      android:layout_marginBottom="16dp"
+      android:backgroundTint="#C1101432"
+      android:text="@string/UpdatePP"
+      android:textSize="20dp"
+      app:cornerRadius="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.357"
+      app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

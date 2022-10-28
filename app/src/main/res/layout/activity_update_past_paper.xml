@@ -70,64 +70,30 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
-  <TextView
-      android:id="@+id/pdfU"
-      android:layout_width="230dp"
-      android:layout_height="50dp"
-      android:layout_marginTop="524dp"
-      android:background="#AB418DFF"
-      android:fontFamily="@font/aclonica"
-      android:gravity="center"
-      android:text="@string/Uploadedit"
-      android:textSize="20sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.425"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
-  <EditText
-      android:id="@+id/yeart"
-      android:layout_width="368dp"
-      android:layout_height="56dp"
-      android:layout_marginStart="24dp"
-      android:layout_marginTop="4dp"
-      android:background="@drawable/rounded"
-      android:ems="10"
-
-      android:gravity="center"
-      android:inputType="textPersonName"
-      app:layout_constraintBottom_toBottomOf="@+id/button"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/pdfU"
-      app:layout_constraintVertical_bias="0.036"
-      tools:ignore="SpeakableTextPresentCheck" />
-
-  <EditText
-      android:id="@+id/gradet"
+  <Spinner
+      android:id="@+id/gradespin"
       android:layout_width="369dp"
       android:layout_height="57dp"
       android:layout_marginStart="20dp"
-      android:background="@drawable/rounded"
       android:ems="10"
       android:gravity="center"
       android:inputType="textPersonName"
-
+      android:entries="@array/spinnerItems"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/grade"
       app:layout_constraintVertical_bias="0.03"
       tools:ignore="SpeakableTextPresentCheck" />
 
-  <EditText
-      android:id="@+id/PdfUp"
+  <Spinner
+      android:id="@+id/yearspin"
       android:layout_width="375dp"
       android:layout_height="50dp"
       android:layout_marginStart="16dp"
-      android:background="@drawable/rounded"
       android:ems="10"
       android:gravity="center"
       android:inputType="textPersonName"
-
+      android:entries="@array/years"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/Year"
@@ -135,8 +101,8 @@
       tools:ignore="SpeakableTextPresentCheck" />
 
   <Button
-      android:id="@+id/submitPP"
-      android:layout_width="340dp"
+      android:id="@+id/updateppp"
+      android:layout_width="wrap_content"
       android:layout_height="74dp"
       android:backgroundTint="#D3607B"
       android:enabled="false"
@@ -145,7 +111,7 @@
       android:text="@string/Update"
       android:textAppearance="@style/TextAppearance.AppCompat.Body1"
       android:textColor="#0E0D0D"
-      android:textSize="35sp"
+      android:textSize="20sp"
       app:cornerRadius="@dimen/padQ"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
@@ -171,7 +137,7 @@
       tools:ignore="SpeakableTextPresentCheck" />
 
   <Button
-      android:id="@+id/button"
+      android:id="@+id/buttonUp"
       android:layout_width="313dp"
       android:layout_height="70dp"
       android:layout_marginBottom="16dp"

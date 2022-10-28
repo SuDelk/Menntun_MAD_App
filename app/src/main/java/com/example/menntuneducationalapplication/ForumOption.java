@@ -111,7 +111,7 @@ public class ForumOption extends AppCompatActivity {
             public void onClick(View view) {
                 dbRef.child(ForumName).setValue(null);
                 Toast.makeText(ForumOption.this,"Content Deleted ",Toast.LENGTH_SHORT).show();
-                Intent X = new Intent(ForumOption.this,MainActivityTutor.class);
+                Intent X = new Intent(ForumOption.this,SubjectSelectorForForums.class);
                 startActivity(X);
             }
         });

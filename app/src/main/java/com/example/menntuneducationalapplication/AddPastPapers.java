@@ -29,6 +29,10 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.time.Year;
+
+import javax.security.auth.Subject;
+
 
 public class AddPastPapers extends AppCompatActivity {
 
@@ -129,7 +133,7 @@ public class AddPastPapers extends AppCompatActivity {
                         while (!uriTask.isComplete()) ;
                         Uri url = uriTask.getResult();
 
-                        uploadPDF uploadPDF = new uploadPDF( url.toString(),Subject.getText().toString(),Subject.getText().toString(),gradeS.getSelectedItem().toString());
+                        uploadPDF uploadPDF = new uploadPDF( url.toString(),Subject.getText().toString(), yearS.getSelectedItem().toString(),gradeS.getSelectedItem().toString());
                         databaseReference.child(String.valueOf(maxId+1)).setValue(uploadPDF);
 
                         Toast.makeText(AddPastPapers.this, "File Upload", Toast.LENGTH_SHORT).show();

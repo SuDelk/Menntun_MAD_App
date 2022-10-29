@@ -134,7 +134,7 @@ public class AddPastPapers extends AppCompatActivity {
                         Uri url = uriTask.getResult();
 
                         uploadPDF uploadPDF = new uploadPDF( url.toString(),Subject.getText().toString(), yearS.getSelectedItem().toString(),gradeS.getSelectedItem().toString());
-                        databaseReference.child(String.valueOf(maxId+1)).setValue(uploadPDF);
+                        databaseReference.push().setValue(uploadPDF);
 
                         Toast.makeText(AddPastPapers.this, "File Upload", Toast.LENGTH_SHORT).show();
 

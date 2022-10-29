@@ -70,6 +70,7 @@ public class ReplyOptions extends AppCompatActivity {
             public void onClick(View v) {
                 updateReply();
                 Toast.makeText(ReplyOptions.this, "Reply Updated", Toast.LENGTH_SHORT).show();
+                Intent lol = new Intent(ReplyOptions.this,SubjectSelectorForForums.class);
             }
         });
     }
@@ -119,8 +120,13 @@ public class ReplyOptions extends AppCompatActivity {
                                 getPosition();
                                 dbRef.child(String.valueOf(count)).setValue(null);
                                 Toast.makeText(ReplyOptions.this,"Content Deleted ",Toast.LENGTH_SHORT).show();
-                                Intent X = new Intent(ReplyOptions.this,MainActivityTutor.class);
-                                startActivity(X);
+                                if(GlobalStudent._USER == null){
+                                    Intent X = new Intent(ReplyOptions.this,MainActivityTutor.class);
+                                    startActivity(X);
+                                }else{
+                                    Intent X = new Intent(ReplyOptions.this,MainActivityStudent.class);
+                                    startActivity(X);
+                                }
 
 
                     }

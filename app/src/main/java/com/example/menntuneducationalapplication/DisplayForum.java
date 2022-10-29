@@ -83,7 +83,7 @@ public class DisplayForum extends AppCompatActivity {
             }
         });
 
-        Toast.makeText(this, "Hello "+sub, Toast.LENGTH_SHORT).show();
+
 
     }
 }

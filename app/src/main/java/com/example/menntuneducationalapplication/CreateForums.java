@@ -47,6 +47,7 @@ public class CreateForums extends AppCompatActivity {
         Forum ff= new Forum(Q,sub);
         if(Q.isEmpty()){
             Toast.makeText(this,"Can not raise empty field",Toast.LENGTH_SHORT).show();
+            edt.setError("Can not raise an empty question");
         }else {
 
             db.child(Q).setValue(ff);

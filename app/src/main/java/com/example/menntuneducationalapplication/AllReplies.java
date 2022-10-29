@@ -44,7 +44,7 @@ public class AllReplies extends AppCompatActivity {
                 int count=0;
                 for(DataSnapshot dataSnapshot:snapshot.child("Forums").child(ForumName).child("Reply").getChildren()){
                     String replies = String.valueOf(dataSnapshot.getValue());
-                    Toast.makeText(AllReplies.this,replies, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(AllReplies.this,replies, Toast.LENGTH_SHORT).show();
                     count=count+1;
 
                     bt = new Button(AllReplies.this);

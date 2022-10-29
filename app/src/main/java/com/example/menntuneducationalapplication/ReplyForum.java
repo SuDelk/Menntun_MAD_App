@@ -45,9 +45,7 @@ public class ReplyForum extends AppCompatActivity {
             public void onClick(View view) {
                 sendReply();
 
-                Intent lol = new Intent(ReplyForum.this,AllReplies.class);
-                lol.putExtra("ForumName",ForumName);
-                startActivity(lol);
+
             }
         });
 
@@ -72,8 +70,17 @@ public class ReplyForum extends AppCompatActivity {
 //        long temp = maxRep+1;
         String place= String.valueOf(++maxRep);
         String Q=reply.getText().toString();
-        db.child(ForumName).child("Reply").child(place).setValue(Q);
+        if(Q.isEmpty()){
+            Toast.makeText(this, "Please Enter Reply", Toast.LENGTH_SHORT).show();
+            reply.setError("Can not share an empty reply");
+        }else {
 
-        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+            db.child(ForumName).child("Reply").child(place).setValue(Q);
+            Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+            Intent lol = new Intent(ReplyForum.this,AllReplies.class);
+            lol.putExtra("ForumName",ForumName);
+            startActivity(lol);
+        }
+
     }
 }

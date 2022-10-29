@@ -158,12 +158,13 @@ public class CreateQuiz2 extends AppCompatActivity {
        next.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
+               checkDBForData();
                Question = question.getText().toString();
                Option1 = option1.getText().toString();
                Option2 = option2.getText().toString();
                Option3 = option3.getText().toString();
                Option4 = option4.getText().toString();
-               if(Question.length() == 0 || Option1.length() == 0 || Option2.length() == 0 || Option3.length() == 0 || Option4.length() == 0){
+               if(Question.length() == 0 || Option1.length() == 0 || Option2.length() == 0 || Option3.length() == 0 || Option4.length() == 0||Answer.length() == 0){
                    Toast.makeText(CreateQuiz2.this, "Enter Details and Select Option", Toast.LENGTH_LONG).show();
                }else{
                    insertQuizQuestionToDB();
@@ -210,7 +211,7 @@ public class CreateQuiz2 extends AppCompatActivity {
         }else {
             QuizModel newQuestion = new QuizModel(++currentPos, Question, Option1, Option2, Option3, Option4, Answer);
             insertQuizQuestion.child(String.valueOf(currentPos)).setValue(newQuestion);
-            Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_LONG).show();
+            Toast.makeText(CreateQuiz2.this, "Question " + currentPos + " Added", Toast.LENGTH_SHORT).show();
             question.setText("");
             option1.setText("");
             option2.setText("");

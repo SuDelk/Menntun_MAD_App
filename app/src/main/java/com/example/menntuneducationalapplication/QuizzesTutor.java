@@ -62,7 +62,6 @@ public class QuizzesTutor extends AppCompatActivity {
                     b1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Toast.makeText(QuizzesTutor.this, questionCount, Toast.LENGTH_SHORT).show();
                             Intent intent =  new Intent(QuizzesTutor.this,DisplayQuizDif.class);
                             intent.putExtra("quizName",quizName);
                             intent.putExtra("questionCount",questionCount);

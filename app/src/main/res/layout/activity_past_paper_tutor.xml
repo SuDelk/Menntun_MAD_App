@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/bg"
+    android:background="@drawable/bg6"
     app:circularflow_radiusInDP="2"
     tools:context=".PastPapers">
 
@@ -13,7 +13,7 @@
         android:id="@+id/textView6"
         android:layout_width="414dp"
         android:layout_height="37dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="3dp"
         android:background="#673AB7"
         android:text="@string/men"
@@ -22,8 +22,10 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/submitPP"
@@ -43,17 +45,13 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
-
-
-
-
+        app:layout_constraintVertical_bias="0.106" />
 
     <Button
         android:id="@+id/addpp"
         android:layout_width="250dp"
         android:layout_height="71dp"
-        android:backgroundTint="#2C2B5E"
+        android:backgroundTint="#6A2813"
         android:text="@string/AddPastPapers"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"

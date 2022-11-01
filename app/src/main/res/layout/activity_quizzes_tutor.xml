@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".QuizzesTutor">
+
+    <LinearLayout
+        android:id="@+id/lin6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:orientation="vertical"
+        android:padding="@dimen/padQ"
+        android:paddingStart="@dimen/padQ"
+        android:paddingLeft="@dimen/padQ"
+        android:paddingTop="@dimen/padQ"
+        android:paddingEnd="@dimen/padQ"
+        android:paddingRight="@dimen/padQ"
+        android:paddingBottom="@dimen/padQ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitPP"
+        app:layout_constraintVertical_bias="0.094"></LinearLayout>
+
+    <Button
+        android:id="@+id/submitPP"
+        android:layout_width="260dp"
+        android:layout_height="69dp"
+        android:backgroundTint="#FFC107"
+        android:enabled="false"
+        android:fontFamily="@font/autour_one"
+        android:includeFontPadding="false"
+        android:text="@string/quizzes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#0E0D0D"
+        android:textSize="34sp"
+        app:cornerRadius="@dimen/padQ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <Button
+        android:id="@+id/addQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0C1D77"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/add_new_quiz"
+        android:textColor="#FFEB3B"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961"
+        app:strokeColor="#00BCD4"
+        app:strokeWidth="2dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

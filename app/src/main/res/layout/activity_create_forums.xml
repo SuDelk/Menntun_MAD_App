@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgl"
+    tools:context=".CreateForums">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="414dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="3dp"
+        android:background="#673AB7"
+        android:text="@string/men"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/raise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="159dp"
+        android:backgroundTint="#8E4E3A"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <EditText
+        android:id="@+id/question"
+        android:layout_width="405dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="101dp"
+        android:background="#85000000"
+        android:backgroundTint="#E1000000"
+        android:ems="10"
+        android:fontFamily="@font/allerta"
+        android:hint="@string/qForum"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#F6F6F6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/viewForums"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="162dp"
+        android:fontFamily="@font/aclonica"
+        android:onClick="intoForums"
+        android:text="@string/sf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/raise" />
+</androidx.constraintlayout.widget.ConstraintLayout>

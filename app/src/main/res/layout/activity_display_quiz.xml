@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayQuiz"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/idTVQuestionAttempted"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@+id/quizName2"
+        android:layout_marginTop="1dp"
+        android:background="#C37B75D8"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:text="@string/number_of_questions"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/IdTVQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/idTVQuestionAttempted"
+        android:layout_marginTop="2dp"
+        android:background="#145E9A"
+        android:backgroundTint="#9C728CEA"
+        android:fontFamily="@font/autour_one"
+        android:gravity="center"
+        android:text="@string/question"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/IdTVQuestion"
+        android:layout_marginTop="19dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/purple_200"
+            android:fontFamily="@font/carter_one"
+            android:padding="4dp"
+            android:text="@string/option_1"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/Option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/purple_200"
+            android:fontFamily="@font/carter_one"
+            android:padding="4dp"
+            android:text="@string/option_2"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/Option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/purple_200"
+            android:fontFamily="@font/carter_one"
+            android:padding="4dp"
+            android:text="@string/option_3"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/Option4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/purple_200"
+            android:fontFamily="@font/carter_one"
+            android:padding="4dp"
+            android:text="@string/option_4"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/quizName2"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#A85D3FB1"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="test"
+        android:textAllCaps="false"
+        android:textColor="#0C0C0C"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

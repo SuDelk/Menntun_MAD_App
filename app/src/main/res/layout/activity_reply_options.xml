@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReplyOptions"
+    android:background="@drawable/bgl">
+
+    <Button
+        android:id="@+id/btnEdR"
+        android:layout_width="104dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="149dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/edit"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <Button
+        android:id="@+id/btnDR"
+        android:layout_width="104dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="149dp"
+        android:backgroundTint="#BA0C0C"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/DEl"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEdR" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="394dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="8dp"
+        android:background="#7C1C286A"
+        android:backgroundTint="#9E812A"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
